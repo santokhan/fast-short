@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import Logo, { LogoWhite } from '@/components/Logo'
+import Logo from '@/components/Logo'
 import NavList from './NavList'
 import Link from 'next/link'
 import { twMerge } from 'tailwind-merge'
@@ -24,7 +24,7 @@ const NavBar = ({ className = '', transparent = false }) => {
       <div className='mx-auto flex w-full max-w-screen-xl flex-1 items-center justify-between px-4 h-full'>
         <div className='md:w-2/12 flex-shrink-0 flex'>
           <Link href='/' className='router-link-active router-link-exact-active'>
-            {transparent ? <LogoWhite /> : <Logo />}
+            <Logo />
           </Link>
         </div>
         <div className='hidden flex-grow lg:block'>

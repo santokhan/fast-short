@@ -2,23 +2,17 @@
 
 import React from 'react'
 
-const GoogleSignInForm = () => {
-  const handleClick = () => {
-    // Handle the click event here
-  }
-
+const GoogleSignInForm = ({ onSignIn }) => {
   return (
     <div className='relative mx-auto max-w-[525px] overflow-hidden rounded-xl bg-white p-6 lg:p-8 text-center space-y-8'>
       <div className='text-center'>
-        <a href className='mx-auto inline-block'>
-          <h1 className='text-xl sm:text-2xl md:text-3xl font-semibold'>Sign In</h1>
-        </a>
+        <h1 className='text-xl sm:text-2xl md:text-3xl font-semibold'>Sign In</h1>
       </div>
       <div className='space-y-4'>
         <p className='text-base text-gray-700'>Connect With</p>
         <button
           type='button'
-          onClick={handleClick}
+          onClick={onSignIn}
           className='w-full flex h-11 items-center justify-center rounded-md bg-button hover:bg-opacity-90'
         >
           <svg className='size-6' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'>
