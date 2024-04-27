@@ -24,6 +24,7 @@ export const LoginButton = ({ transparent = false }) => {
                         'px-6 py-2 rounded-full font-medium',
                         transparent ? 'text-gray-50 hover:bg-white/10' : 'text-gray-900 hover:bg-black/10'
                     )}
+                    title='Sign Out'
                 >
                     Sign Out
                 </button>
