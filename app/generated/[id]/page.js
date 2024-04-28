@@ -4,7 +4,6 @@ import getURL from '@/actions/query/getURL';
 import NavbarSpace from '@/components/NavbarSpace'
 import Section from '@/components/Section'
 import CopyButton from '@/components/button/CopyButton';
-import Link from 'next/link'
 
 export default async function GeneratedPage({ params }) {
   if (params && params.id) {
@@ -45,7 +44,7 @@ export default async function GeneratedPage({ params }) {
                     res.URL &&
                     <div className='flex items-center gap-2 mt-6'>
                       <div className="px-4 py-3 bg-gray-50 flex items-center rounded-lg w-full max-w-[268px]">
-                        <div className='overflow-x-hidden'>{res.URL || ""}</div>...
+                        <p className='overflow-x-hidden whitespace-nowrap'>{res.URL || ""}</p>...
                       </div>
                       <CopyButton url={path} />
                     </div>
@@ -56,8 +55,24 @@ export default async function GeneratedPage({ params }) {
           </Section>
         </main>
       )
+    } else {
+      return (
+        <main className='min-h-screen'>
+          <NavbarSpace />
+          <Section>
+            <p>Something went wrong!</p>
+          </Section>
+        </main>
+      )
     }
   } else {
-
+    return (
+      <main className='min-h-screen'>
+        <NavbarSpace />
+        <Section>
+          <p>Something went wrong!</p>
+        </Section>
+      </main>
+    )
   }
 }
