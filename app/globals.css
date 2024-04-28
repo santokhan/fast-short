@@ -2,7 +2,10 @@
 
 @layer base {
   body {
-    background: radial-gradient(95.36% 95.12% at 110% 13%, #f9c1a7 0, #fff 100%);
+    background-color: #fff;
+    background-image: radial-gradient(95.36% 95.12% at 110% 13%, #f9c1a7 0, #fff 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
 }
 
