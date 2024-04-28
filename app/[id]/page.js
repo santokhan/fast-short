@@ -3,9 +3,9 @@
 // Redirect page for the URL shortener
 
 import NavbarSpace from '@/components/NavbarSpace'
-import Container from '@/components/Container'
 import getURL from '@/actions/query/getURL'
 import { permanentRedirect } from 'next/navigation'
+import Section from '@/components/Section'
 
 const Redirect = async ({ params }) => {
     if (params) {
@@ -16,10 +16,10 @@ const Redirect = async ({ params }) => {
         return (
             <div className='min-h-screen'>
                 <NavbarSpace />
-                <Container className="py-8">
+                <Section>
                     {JSON.stringify(params)}
                     <div>Redirect Page</div>
-                </Container>
+                </Section>
             </div>
         )
     }
