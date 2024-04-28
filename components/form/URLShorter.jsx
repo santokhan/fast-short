@@ -36,7 +36,7 @@ const UrlShorterForm = () => {
                             return { ...prev, alias: 'Alias already exists' }
                         })
                     } else {
-                        const res = await createURL(url, domain, '', alias, '')
+                        const res = await createURL({ url, domain, hash: '', alias, author: '' })
 
                         if (res) {
                             setLoading(false)
@@ -59,7 +59,7 @@ const UrlShorterForm = () => {
                 try {
                     const shortenedId = shortenUrlToId(url)
 
-                    const res = await createURL(url, domain, shortenedId, '', '')
+                    const res = await createURL({ url, domain, shortenedId, alias: '', author: '' })
 
                     if (res) {
                         setLoading(false)
