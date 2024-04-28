@@ -2,7 +2,6 @@
 
 import checkAlias from '@/actions/query/checkAlias'
 import createURL from '@/actions/query/createURL'
-import storeURLHash from '@/actions/storeURLHash'
 import shortenUrlToId from '@/lib/shorter/shortid'
 import React, { useState } from 'react'
 import placeholder from './shorter-form/placeholder'
@@ -60,7 +59,7 @@ const UrlShorterForm = () => {
                 try {
                     const shortenedId = shortenUrlToId(url)
 
-                    const res = await storeURLHash(url, domain, shortenedId)
+                    const res = await createURL(url, domain, shortenedId, '', '')
 
                     if (res) {
                         setLoading(false)
