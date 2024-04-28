@@ -2,36 +2,31 @@
 
 import prisma from "@/prisma/prismaClient"
 
-/**
- * Check existance of alias
- * 
- * @param {*} domain 
- * @param {*} alias 
- * @returns 
- */
-async function getURL(id='') {
+async function getURL(id = '') {
     if (!id) {
         console.error('Invalid parameters provided to checkAlias')
         return
     } else {
         try {
             const result = await prisma.urls.findFirst({
-                where: {
-                    OR: [
-                        { hash: id },
-                        { alias: id }
-                    ]
-                }
+                where: { hash: id }
             })
-            return result
+
+            if (result) {
+                return result;
+            } else {
+                const res = await prisma.urls.findFirst({
+                    where: { alias: id }
+                })
+
+                return res
+            }
         } catch (error) {
             console.error(error)
         } finally {
             prisma.$disconnect()
         }
     }
-
-    console.log(domain, alias)
 }
 
 export default getURL
