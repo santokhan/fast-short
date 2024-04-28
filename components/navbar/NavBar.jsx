@@ -5,6 +5,7 @@ import NavList from './NavList'
 import Link from 'next/link'
 import { twMerge } from 'tailwind-merge'
 import { LoginButton } from './LoginButton'
+import AuthProvider from '@/context/AuthContext'
 
 const NavBar = ({ className = '', transparent = false }) => {
     const [scrollY, setScrollY] = React.useState(0)
@@ -31,7 +32,9 @@ const NavBar = ({ className = '', transparent = false }) => {
                     <NavList transparent={transparent} />
                 </div>
                 <div className='hidden md:w-2/12 flex-shrink-0 lg:flex justify-end'>
-                    <LoginButton transparent={transparent} />
+                    <AuthProvider>
+                        <LoginButton transparent={transparent} />
+                    </AuthProvider>
                 </div>
                 <div className='flex items-center justify-center lg:hidden'>
                     <button
