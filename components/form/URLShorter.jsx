@@ -2,7 +2,6 @@
 
 import checkAlias from '@/actions/query/checkAlias'
 import createURL from '@/actions/query/createURL'
-import storeURLAlias from '@/actions/storeURLAlias'
 import storeURLHash from '@/actions/storeURLHash'
 import shortenUrlToId from '@/lib/shorter/shortid'
 import React, { useState } from 'react'
@@ -11,14 +10,11 @@ import { useRouter } from 'next/navigation'
 import { storeToLocal } from '@/lib/local-storage/localStorage'
 import SubmitButton from './shorter-form/SubmitButton'
 import { twMerge } from 'tailwind-merge'
-import { onSubmitShortForm } from '@/actions/onSubmit'
 import DomainSelect from './shorter-form/SelectDomain'
-import initialURL from '@/utils/initialURL'
 import FormTitle from '@/components/form/FormTitle'
 
 const UrlShorterForm = () => {
-    const [url, setUrl] = useState(initialURL)
-    // const [url, setUrl] = useState('')
+    const [url, setUrl] = useState('')
     const [domain, setDomain] = useState('fastshort.xyz')
     const [alias, setAlias] = useState('')
     const [error, setError] = useState({})
