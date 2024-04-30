@@ -6,13 +6,14 @@ import Container from './Container'
 export const AdsF1 = () => {
     useEffect(() => {
         try {
-            ;(window.adsbygoogle = window.adsbygoogle || []).push({})
+            window.adsbygoogle = window.adsbygoogle || []
+            window.adsbygoogle.push({})
         } catch (error) {
             console.error(error)
         }
     }, [])
     return (
-        <Container className='bg-white'>
+        <Container className='bg-white/20'>
             <ins
                 className='adsbygoogle'
                 style={{ display: 'block' }}
