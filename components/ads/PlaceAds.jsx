@@ -1,9 +1,3 @@
-const { default: Script } = require('next/script')
-
-const PlaceAds = () => {
-    return <Script id='ad-script'>(adsbygoogle = window.adsbygoogle || []).push({});</Script>
-}
-
 const AdsF1 = () => {
     return (
         <div className='adsF1'>
@@ -20,4 +14,3 @@ const AdsF1 = () => {
 }
 
 export { AdsF1 }
-export default PlaceAds

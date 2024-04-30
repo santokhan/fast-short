@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
       </Head>
       <body className={inter.className}>
         <AdsScript />
-        <PlaceAds />
+        <Script async src="/ad-script.js" />
 
         <NavBar />
         {children}
