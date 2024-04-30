@@ -5,6 +5,7 @@ import AdsScript from "@/components/AdsScript";
 import Head from "next/head";
 import Script from "next/script";
 import PlaceAds from "@/components/ads/PlaceAds";
+import GoogleTag from "@/components/GoogleTag";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <AdsScript />
         <Script async src="/ad-script.js" />
+        <GoogleTag />
 
         <NavBar />
         {children}
