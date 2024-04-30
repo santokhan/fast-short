@@ -18,8 +18,8 @@ const AdsF1 = () => {
     return (
         <div className='adsF1'>
             <ins
-                class='adsbygoogle'
-                style='display:block'
+                className='adsbygoogle'
+                style={{ display: 'block' }}
                 data-ad-client='ca-pub-4863734906175420'
                 data-ad-slot='8798372090'
                 data-ad-format='auto'
