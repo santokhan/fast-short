@@ -1,11 +1,8 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/navbar/NavBar";
-import AdsScript from "@/components/AdsScript";
 import Head from "next/head";
 import Script from "next/script";
-import PlaceAds from "@/components/ads/PlaceAds";
-import GoogleTag from "@/components/GoogleTag";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,14 +15,16 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Head>
-        {/* Ads Meta */}
         <meta name="google-adsense-account" content="ca-pub-4863734906175420" />
-        {/* Ads Meta End */}
       </Head>
       <body className={inter.className}>
-        <AdsScript />
-        <Script async src="/ad-script.js" />
-        <GoogleTag />
+        <Script
+          id='ad-script-cdn'
+          async
+          src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4863734906175420'
+          crossOrigin='anonymous'
+          strategy='afterInteractive'
+        />
 
         <NavBar />
         {children}

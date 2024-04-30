@@ -1,11 +1,26 @@
-import Script from 'next/script'
+'use client'
 
-const AdsScript = () => (
-    <Script
-        async
-        src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4863734906175420'
-        crossOrigin='anonymous'
-    />
-)
+import { useEffect } from 'react'
+import Container from './Container'
 
-export default AdsScript
+export const AdsF1 = () => {
+    useEffect(() => {
+        try {
+            ;(window.adsbygoogle = window.adsbygoogle || []).push({})
+        } catch (error) {
+            console.error(error)
+        }
+    }, [])
+    return (
+        <Container className='bg-white'>
+            <ins
+                className='adsbygoogle'
+                style={{ display: 'block' }}
+                data-ad-client='ca-pub-4863734906175420'
+                data-ad-slot='8798372090'
+                data-ad-format='auto'
+                data-full-width-responsive='true'
+            ></ins>
+        </Container>
+    )
+}
