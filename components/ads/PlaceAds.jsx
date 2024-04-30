@@ -1,17 +1,7 @@
 const { default: Script } = require('next/script')
 
 const PlaceAds = () => {
-    return (
-        <>
-            <Script
-                async
-                src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4863734906175420'
-                crossOrigin='anonymous'
-            ></Script>
-
-            <Script id='ad-script'>(adsbygoogle = window.adsbygoogle || []).push({});</Script>
-        </>
-    )
+    return <Script id='ad-script'>(adsbygoogle = window.adsbygoogle || []).push({});</Script>
 }
 
 const AdsF1 = () => {
