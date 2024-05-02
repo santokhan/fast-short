@@ -20,9 +20,9 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Script
           id='ad-script-cdn'
-          async
+          async={true}
           src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4863734906175420'
-          crossOrigin='anonymous'
+          // crossOrigin='anonymous'
           strategy='afterInteractive'
         />
 
