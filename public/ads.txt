@@ -1,9 +1,1 @@
-# Replace example.com with your domain name
-
-# Direct sellers
-# https://www.google.com/adsense/new/u/0/pub-4863734906175420/sites/detail/url=fastshort.xyz
 google.com, pub-4863734906175420, DIRECT, f08c47fec0942fa0
-# facebook.com, 123456789012345, DIRECT, f08c47fec0942fa0
-
-# Reseller
-# fastshort.com, 9876543210987654, RESELLER, f08c47fec0942fa0
