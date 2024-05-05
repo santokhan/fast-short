@@ -12,6 +12,7 @@ const DomainSelect = ({ value, onChange, required = false }) => {
             className='block px-4 py-4 w-full rounded-lg bg-gray-50'
             placeholder='Domain'
             required={required}
+            title='Domain'
         >
             {domains.map((domain) => (
                 <option key={domain.value} value={domain.value}>

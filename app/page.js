@@ -1,11 +1,13 @@
+'ues server';
+
 import NavbarSpace from "@/components/NavbarSpace";
 import Section from "@/components/Section";
 import URLShorterForm from "@/components/form/URLShorterForm";
 import URLShort from "@/components/form/URLShorter";
 import { AdsF1 } from "@/components/AdsScript";
 
-export default function URLShortFormPage({ searchParams }) {
-  const error = { ...searchParams }
+export default async function URLShortFormPage({ searchParams }) {
+  // const error = { ...searchParams }
 
   return (
     <>
@@ -15,6 +17,8 @@ export default function URLShortFormPage({ searchParams }) {
           {/* <URLShorterForm error={error} /> */}
           <URLShort />
         </Section>
+        <AdsF1 />
+        <AdsF1 />
         <AdsF1 />
       </main>
     </>

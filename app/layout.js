@@ -11,24 +11,29 @@ export const metadata = {
   description: "A powerful URL shortener",
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
   return (
     <html lang="en">
+      <script
+        id='ad-script-cdn'
+        async={true}
+        src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4863734906175420'
+        crossOrigin='anonymous'
+      />
       <Head>
         <meta name="google-adsense-account" content="ca-pub-4863734906175420" />
       </Head>
       <body className={inter.className}>
-        <Script
+        {/* <Script
           id='ad-script-cdn'
           async={true}
           src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4863734906175420'
-          // crossOrigin='anonymous'
-          strategy='afterInteractive'
-        />
-
+          crossOrigin='anonymous'
+          strategy='lazyOnload'
+        /> */}
         <NavBar />
         {children}
       </body>
-    </html >
+    </html>
   );
 }
