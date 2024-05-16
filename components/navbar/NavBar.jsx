@@ -66,7 +66,7 @@ const FloatingNavigation = ({ transparent = false }) => {
                         </div>
                     </div>
                 </Transition>,
-                document.body
+                window.document.body
             )}
         </>
     )
