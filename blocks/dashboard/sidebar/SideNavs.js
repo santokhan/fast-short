@@ -30,10 +30,6 @@ function SideNavs({ onClose }) {
             link: '/dashboard',
         },
         {
-            label: 'wallet',
-            link: '/dashboard/wallet',
-        },
-        {
             label: 'manage-links',
             link: '/dashboard/manage-links',
         },

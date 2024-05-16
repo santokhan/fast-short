@@ -11,6 +11,7 @@ import SubmitButton from './shorter-form/SubmitButton'
 import { twMerge } from 'tailwind-merge'
 import DomainSelect from './shorter-form/SelectDomain'
 import FormTitle from '@/components/form/FormTitle'
+import { useSession } from 'next-auth/react'
 
 const UrlShorterForm = () => {
     const [url, setUrl] = useState('')
@@ -19,9 +20,12 @@ const UrlShorterForm = () => {
     const [error, setError] = useState({})
     const [loading, setLoading] = useState(false)
     const router = useRouter()
+    const { data } = useSession()
 
     const handleSubmit = async (e) => {
         e.preventDefault()
+
+        const author = data?.user?.email || ''
 
         if (url && domain) {
             if (alias) {
@@ -36,7 +40,7 @@ const UrlShorterForm = () => {
                             return { ...prev, alias: 'Alias already exists' }
                         })
                     } else {
-                        const res = await createURL({ url, domain, hash: '', alias, author: '' })
+                        const res = await createURL({ url, domain, hash: '', alias, author })
 
                         if (res) {
                             setLoading(false)
@@ -59,7 +63,7 @@ const UrlShorterForm = () => {
                 try {
                     const shortenedId = shortenUrlToId(url)
 
-                    const res = await createURL({ url, domain, shortenedId, alias: '', author: '' })
+                    const res = await createURL({ url, domain, shortenedId, alias: '', author })
 
                     if (res) {
                         setLoading(false)

@@ -6,6 +6,7 @@ import URLShorterForm from "@/components/form/URLShorterForm";
 import URLShort from "@/components/form/URLShorter";
 import { AdsF1 } from "@/components/AdsScript";
 import NavBar from "@/components/navbar/NavBar";
+import AuthProvider from "@/context/AuthContext";
 
 export default async function URLShortFormPage({ searchParams }) {
   // const error = { ...searchParams }
@@ -17,7 +18,9 @@ export default async function URLShortFormPage({ searchParams }) {
         <NavbarSpace />
         <Section className="space-y-8">
           {/* <URLShorterForm error={error} /> */}
-          <URLShort />
+          <AuthProvider>
+            <URLShort />
+          </AuthProvider>
         </Section>
         <AdsF1 />
         <AdsF1 />

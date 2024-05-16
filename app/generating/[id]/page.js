@@ -33,7 +33,7 @@ export default function GeneratingPage({ params }) {
                 <p className='mt-2'>
                   Thanks you for using our services. Please click the button below to get your URL.
                 </p>
-                <div className>
+                <div>
                   <Link href={'/generated/' + id} className='flex justify-center items-center px-6 py-3 rounded-lg mt-6 bg-button font-medium text-white'>
                     Click Here to get URL
                   </Link>
