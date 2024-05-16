@@ -48,7 +48,7 @@ function SideNavs({ onClose }) {
     ]
 
     return (
-        <div className="relative w-64 -translate-x-full translate-x-0 p-4 transition-transform" tabIndex="-1">
+        <div className="relative w-64 -translate-x-full+ translate-x-0+ p-4 transition-transform" tabIndex="-1">
             <UserInfoSide />
             <CloseButton onClose={onClose} />
             <div className="overflow-y-auto py-4+">
