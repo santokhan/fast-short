@@ -39,35 +39,32 @@ const FloatingNavigation = ({ transparent = false }) => {
                     />
                 </svg>
             </button>
-            {createPortal(
-                <Transition
-                    show={state}
-                    enter='transition-opacity duration-300'
-                    enterFrom='opacity-0'
-                    enterTo='opacity-100'
-                    leave='transition-opacity duration-150'
-                    leaveFrom='opacity-100'
-                    leaveTo='opacity-0'
-                >
-                    <div className='fixed h-screen top-0 left-0 right-0 bg-white p-4 lg:p-6 text-lg z-[3]'>
-                        <div className='flex justify-between items-center gap-6'>
-                            <Link href='/' className=''>
-                                <Logo />
-                            </Link>
-                            <button type='button' className='size-6' onClick={() => setState(false)}>
-                                <CloseCircle className='' />
-                            </button>
-                        </div>
-                        <NavList transparent={transparent} className='flex-col gap-4 mt-8' />
-                        <div className='flex justify-center mt-6'>
-                            <AuthProvider>
-                                <LoginButton transparent={transparent} />
-                            </AuthProvider>
-                        </div>
+            <Transition
+                show={state}
+                enter='transition-opacity duration-300'
+                enterFrom='opacity-0'
+                enterTo='opacity-100'
+                leave='transition-opacity duration-150'
+                leaveFrom='opacity-100'
+                leaveTo='opacity-0'
+            >
+                <div className='fixed h-screen top-0 left-0 right-0 bg-white p-4 lg:p-6 text-lg z-[3]'>
+                    <div className='flex justify-between items-center gap-6'>
+                        <Link href='/' className=''>
+                            <Logo />
+                        </Link>
+                        <button type='button' className='size-6' onClick={() => setState(false)}>
+                            <CloseCircle className='' />
+                        </button>
                     </div>
-                </Transition>,
-                window.document.body
-            )}
+                    <NavList transparent={transparent} className='flex-col gap-4 mt-8' />
+                    <div className='flex justify-center mt-6'>
+                        <AuthProvider>
+                            <LoginButton transparent={transparent} />
+                        </AuthProvider>
+                    </div>
+                </div>
+            </Transition>
         </>
     )
 }
