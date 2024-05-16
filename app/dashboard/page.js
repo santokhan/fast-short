@@ -52,10 +52,9 @@ const cardsData = [
 ]
 
 export default function Dashboard() {
-  const { status, data, update, error } = useSession()
+  const { data } = useSession()
 
   if (data && data.user) {
-    const user = data.user
     return (
       <>
         <h3 className="text-xl font-medium">Today&apos;s Report</h3>
