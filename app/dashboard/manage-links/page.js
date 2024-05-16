@@ -35,7 +35,7 @@ export default function Dashboard() {
   if (Array.isArray(URLs) && URLs.length > 0) {
     return (
       <div>
-        <h2 class="text-2xl font-semibold">Our Exclusive Team</h2>
+        <h2 class="text-2xl font-semibold">Manage Links</h2>
         <div className="overflow-x-auto bg-white rounded-lg p-4 mt-4">
           <table className="w-full">
             <thead>
