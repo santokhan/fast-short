@@ -31,12 +31,12 @@ const Card = {
 const cardsData = [
   {
     title: 'Views',
-    amount: 586,
+    amount: 0,
     icon: <Home className="w-full h-full" />
   },
   {
     title: "Earnings",
-    amount: 586,
+    amount: 0,
     icon: <Home className="w-full h-full" />
   },
   {
