@@ -28,7 +28,6 @@ export default async function RootLayout({ children }) {
           crossOrigin='anonymous'
           strategy='lazyOnload'
         /> */}
-        <NavBar />
         {children}
       </body>
     </html>

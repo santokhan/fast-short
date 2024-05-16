@@ -1,9 +1,10 @@
-import AuthProvider from "@/context/AuthContext";
+import NavBar from "@/components/navbar/NavBar";
 
 export default function RootLayoutPrivate({ children }) {
   return (
-    <AuthProvider>
+    <>
+      <NavBar />
       {children}
-    </AuthProvider>
+    </>
   );
 }

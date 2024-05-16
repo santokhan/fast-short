@@ -11,7 +11,9 @@ const Redirect = async ({ params }) => {
     if (params) {
         const res = await getURL(params.id)
 
-        permanentRedirect(res.URL)
+        if (res) {
+            permanentRedirect(res.URL)
+        }
     } else {
         return (
             <div className='min-h-screen'>
