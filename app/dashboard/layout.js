@@ -9,7 +9,7 @@ import { redirect } from "next/navigation";
 import { twMerge } from "tailwind-merge";
 
 const PrivatePages = ({ children }) => {
-  const { status, data, update, error } = useSession()
+  const { status } = useSession()
 
   if (status === 'loading') {
     return (
@@ -31,6 +31,7 @@ const PrivatePages = ({ children }) => {
     )
   } else {
     redirect('/auth/signin')
+    return null; // to avoid React errors
   }
 }
 

@@ -1,11 +1,13 @@
 'use client'
 
 import UserInfoSide from "@/components/UserInfoSide";
+import { usePathname } from "next/navigation";
+import { twMerge } from "tailwind-merge";
 
-function NavItem({ item }) {
+function NavItem({ item, isActive = false, className = '' }) {
     return (
         <li>
-            <a href={item.link} className="group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100">
+            <a href={item.link} className={twMerge("group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100", className || '', isActive && 'bg-gray-100')}>
                 <span className="ml-3 capitalize">{item.label}</span>
                 {item.notification && (
                     <span className="ml-3 inline-flex h-3 w-3 items-center justify-center rounded-full bg-indigo-100 p-3 text-sm font-medium text-indigo-800">{item.notification}</span>
@@ -24,6 +26,10 @@ function CloseButton({ onClose }) {
 }
 
 function SideNavs({ onClose }) {
+    const pathName = usePathname()
+    const parts = pathName.split('/');
+    const lastPath = parts[parts.length - 1];
+
     const navItems = [
         {
             label: 'dashboard',
@@ -53,7 +59,11 @@ function SideNavs({ onClose }) {
             <CloseButton onClose={onClose} />
             <div className="overflow-y-auto py-4+">
                 <ul className="space-y-2 font-medium">
-                    {navItems.map((item, index) => <NavItem key={index} item={item} />)}
+                    {navItems.map((item, index) => {
+                        const parts = item.link.split('/')
+                        const lastIndex = parts.length - 1;
+                        return <NavItem key={index} item={item} isActive={lastPath.includes(parts[lastIndex])} />
+                    })}
                 </ul>
             </div>
         </div>
