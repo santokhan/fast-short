@@ -15,7 +15,6 @@ const PrivatePages = ({ children }) => {
     return (
       <div className="fixed left-0 top-0 inset-0 h-screen w-full flex flex-col items-center justify-center gap-2">
         <Logo />
-        <p>Authenticating...</p>
       </div>
     )
   } else if (status === 'authenticated') {
