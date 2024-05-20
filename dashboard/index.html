@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <title>404 1x Short - Your Fast Link Shortener</title>
+    <meta
+      name="description"
+      content="The fastest URL shortener for creating custom, shareable short links."
+    />
+    <meta
+      name="keywords"
+      content="URL shortener, Link shortener, Short URL generator, Custom short links, Shorten URLs, URL compression, Link management, URL redirection, Shareable links, Shortened web addresses, Tiny URLs, Customized short URLs, Link shrinker, Web address shortener, URL trimming"
+    />
+    <!-- open-graph -->
+    <meta property="og:title" content="1x Short" />
+    <meta
+      property="og:description"
+      content="The fastest URL shortener for creating custom, shareable short links."
+    />
+    <meta property="og:image" content="/assets/images/open-graph/1xshort.png" />
+    <meta property="og:url" content="https://1xshort.com" />
+    <!-- /open-graph -->
+    <!-- tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            backgroundImage: {
+              "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+              "gradient-conic":
+                "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+            },
+            colors: {
+              button: "rgb(247,153,109)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-home">
+    <nav
+      class="fixed top-0 z-[2] flex h-16 w-full items-center transition-colors duration-200 bg-white"
+    >
+      <div
+        class="flex flex-1 items-center justify-between px-4 h-full max-w-screen-xl w-full mx-auto"
+      >
+        <div class="md:w-2/12 flex-shrink-0 flex">
+          <a class="router-link-active router-link-exact-active" href="/"
+            ><div class="text-button font-bold text-2xl">FastShort</div></a
+          >
+        </div>
+        <div class="hidden flex-grow lg:block">
+          <ul class="flex flex-row gap-2 justify-center">
+            <li class="">
+              <a
+                href="/dashboard/"
+                class="py-2.5 px-4 lg:px-5 rounded-full font-semibold text-secondary-900 hover:underline decoration-2 underline-offset-4"
+                ><span class="whitespace-nowrap">Dashboard</span></a
+              >
+            </li>
+            <li class="">
+              <a
+                href="/about/"
+                class="py-2.5 px-4 lg:px-5 rounded-full font-semibold text-secondary-900 hover:underline decoration-2 underline-offset-4"
+                ><span class="whitespace-nowrap">About</span></a
+              >
+            </li>
+            <li class="">
+              <a
+                href="/contact/"
+                class="py-2.5 px-4 lg:px-5 rounded-full font-semibold text-secondary-900 hover:underline decoration-2 underline-offset-4"
+                ><span class="whitespace-nowrap">Contact</span></a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="hidden md:w-2/12 flex-shrink-0 lg:flex justify-end">
+          <button
+            type="button"
+            class="px-6 py-2 rounded-full font-medium text-gray-900 hover:bg-black/10"
+            title="Sign Out"
+          >
+            Sign Out
+          </button>
+        </div>
+        <div class="flex items-center justify-center lg:hidden">
+          <button type="button" class="text-secondary-900" title="Toggle">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+              class="size-8"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 9a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 9Zm0 6.75a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main class="min-h-screen">
+      <div class="h-16"></div>
+      <section class="mx-auto max-w-screen-xl px-4 py-12 lg:py-20 space-y-8">
+        <div class="p-6 lg:p-8 rounded-xl bg-white space-y-6 mx-auto max-w-2xl">
+          <div class="text-center mb-8">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">
+              Oops! Page Not Found
+            </h1>
+            <p class="text-gray-600 mt-4">
+              Sorry, but the page you are looking for does not exist. It might
+              have been removed, had its name changed, or is temporarily
+              unavailable.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="max-w-screen-xl mx-auto p-4 sm:px-6">
+        <div class="w-full md:flex md:items-center md:justify-between">
+          <span class="sm:text-center"
+            >© 2023
+            <a href="https://github.com/santokhan/" class="hover:underline"
+              >Santo</a
+            >. All Rights Reserved.</span
+          >
+          <ul class="flex flex-wrap gap-4 sm:gap-6 items-center">
+            <li>
+              <a href="/about/" class="hover:underline">About</a>
+            </li>
+            <li>
+              <a href="/contact/" class="hover:underline">Contact</a>
+            </li>
+            <li>
+              <a href="/privacy-policy/" class="hover:underline"
+                >Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a href="/privacy-policy/" class="hover:underline"
+                >Terms & Conditions</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
