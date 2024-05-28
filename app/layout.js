@@ -38,7 +38,7 @@ export default async function RootLayout({ children }) {
             /> */}
       </head>
       <body className={inter.className}>
-        <div className="" id='ad-script'></div>
+        <div className='ad-script'></div>
         {children}
 
       </body>
