@@ -35,7 +35,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className={inter.className}>
         {/* Place the ad container where you want the ad to appear */}
-        <div className="ad-container"></div>
+        <div className="mt-10 ad-script-setup"></div>
         {children}
       </body>
     </html>
