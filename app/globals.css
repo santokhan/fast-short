@@ -1,13 +1,20 @@
 @tailwind base;
 
 @layer base {
-  body {
-    background-color: #fff;
-    background-image: radial-gradient(95.36% 95.12% at 110% 13%, #f9c1a7 0, #fff 100%);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
+    body {
+        background-color: #fff;
+        background-image: radial-gradient(95.36% 95.12% at 110% 13%, #f9c1a7 0, #fff 100%);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
 }
 
 @tailwind components;
 @tailwind utilities;
+
+.ad-container {
+    text-align: center;
+    margin: 20px auto;
+    width: 300px;
+    height: 250px;
+}
