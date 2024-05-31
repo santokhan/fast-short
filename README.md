@@ -81,3 +81,9 @@ my-php-project/
 - **Organized Files**: Keep your PHP files organized in the `public` directory.
 
 This setup is lightweight and straightforward, perfect for small projects without the complexity of dependency management.
+
+## Start the development server
+
+```bash
+php -S localhost:8000
+```
