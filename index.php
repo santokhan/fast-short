@@ -56,9 +56,11 @@
                 ?>
             </div>
         </div>
-        <?php
-        include 'includes/ads_popunder.php';
-        ?>
+        <div class="">
+            <?php
+            include 'includes/ads_popunder.php';
+            ?>
+        </div>
     </div>
 
     <?php
