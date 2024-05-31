@@ -23,3 +23,5 @@ switch ($page) {
         include '404.php';
         break;
 }
+
+echo $page;
