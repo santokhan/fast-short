@@ -68,17 +68,18 @@ $job_posts = [
 ?>
 
 
-<div class="flex flex-wrap -mx-4 mt-8">
+<div class="flex flex-wrap items-stretch -mx-4 mt-8">
     <?php foreach ($job_posts as $post) : ?>
         <article id="post-<?php echo htmlspecialchars($post['id']); ?>" class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
-            <div class="bg-white shadow-md rounded-md p-4 lg:p-6">
+            <div class="bg-white shadow-md rounded-md p-4 lg:p-6 h-full">
                 <div class="grid grid-cols-1 gap-4">
                     <h2 class="text-xl font-semibold">
                         <a href="<?php echo htmlspecialchars($post['post_url']); ?>" class="text-blue-500 hover:underline">
                             <?php echo htmlspecialchars($post['title']); ?>
                         </a>
                     </h2>
-                    <header class="flex items-center space-x-2 text-gray-500 text-sm">
+                    <p><?php echo htmlspecialchars($post['description']); ?></p>
+                    <div class="flex items-center space-x-2 text-gray-500 text-sm">
                         <span class="posted-by">
                             Posted by <a href="<?php echo htmlspecialchars($post['author_url']); ?>" class="text-gray-700 hover:underline">
                                 <?php echo htmlspecialchars($post['author']); ?>
@@ -88,9 +89,9 @@ $job_posts = [
                         <span class="published">
                             Published on <?php echo htmlspecialchars($post['publish_date']); ?>
                         </span>
-                    </header>
+                    </div>
                     <div class="text-gray-700">
-                        <p class="mb-4">
+                        <p class="">
                             <?php echo htmlspecialchars($post['excerpt']); ?>
                         </p>
                     </div>
