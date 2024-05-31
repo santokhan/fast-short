@@ -1,5 +1,7 @@
+<!-- NGINX http://localhost:8080/ -->
+
 <?php
-$page = isset($_GET['page']) ? $_GET['page'] : 'home';
+$page = isset($_GET['page']) ? $_GET['page'] : 'home'; // 'home' for '' or '/'
 
 switch ($page) {
     case 'home':
