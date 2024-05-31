@@ -44,22 +44,22 @@
     </main>
 
     <div class="mx-auto w-full max-w-screen-xl p-4">
-        <div class="flex flex-wrap justify-center">
-            <div class="basis-80 flex-grow">
+        <div class="flex flex-col items-center">
+            <div class="">
                 <?php
                 include 'includes/ads1.php';
                 ?>
             </div>
-            <div class="basis-80 flex-grow">
+            <div class="">
                 <?php
                 include 'includes/ads2.php';
                 ?>
             </div>
-        </div>
-        <div class="">
-            <?php
-            include 'includes/ads_popunder.php';
-            ?>
+            <div class="">
+                <?php
+                include 'includes/ads_popunder.php';
+                ?>
+            </div>
         </div>
     </div>
 
