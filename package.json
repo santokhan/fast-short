@@ -4,9 +4,15 @@
   "description": "For a small PHP project with 5-6 pages, using Composer is not strictly necessary, but it can still be beneficial. Composer is a dependency manager for PHP that helps manage libraries and dependencies, and it can simplify autoloading your classes.",
   "main": "index.js",
   "scripts": {
-    "build": "npx tailwindcss -i ./public/css/tailwind.css -o ./public/css/style.css --watch"
+    "watch": "npx tailwindcss -i ./src/style.css -o ./assets/css/style.css --watch"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "install": "^0.13.0",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3"
+  }
 }
