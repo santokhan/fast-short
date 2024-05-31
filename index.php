@@ -43,15 +43,23 @@
 
     </main>
 
-    <?php
-    include 'includes/ads1.php';
-    ?>
-    <?php
-    include 'includes/ads2.php';
-    ?>
-    <?php
-    include 'includes/ads_popunder.php';
-    ?>
+    <div class="mx-auto w-full max-w-screen-xl p-4">
+        <div class="flex flex-wrap justify-center">
+            <div class="basis-80 flex-grow">
+                <?php
+                include 'includes/ads1.php';
+                ?>
+            </div>
+            <div class="basis-80 flex-grow">
+                <?php
+                include 'includes/ads2.php';
+                ?>
+            </div>
+        </div>
+        <?php
+        include 'includes/ads_popunder.php';
+        ?>
+    </div>
 
     <?php
     include 'includes/footer.php';
