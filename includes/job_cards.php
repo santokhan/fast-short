@@ -20,23 +20,29 @@ function get_post_data($post = [], $key = '')
     <?php foreach ($job_posts as $post) : ?>
         <article id="post-<?= get_post_data($post, 'id'); ?>" class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
             <div class="bg-white shadow-md rounded-md p-4 lg:p-6 h-full">
-                <div class="grid grid-cols-1 gap-4">
+                <div class="flex flex-col h-full gap-4">
                     <h2 class="text-xl font-semibold">
                         <a href="<?= get_post_data($post, 'id'); ?>" class="text-blue-500 hover:underline">
                             <?= get_post_data($post, 'title'); ?>
                         </a>
                     </h2>
-                    <p><?= get_post_data($post, 'description'); ?></p>
+                    <p class="h-full"><?= get_post_data($post, 'description'); ?></p>
                     <div class="flex items-center space-x-2 text-gray-500 text-sm">
-                        <span class="">
-                            Posted by < href="<?= get_post_data($post, 'author_url'); ?>" class="text-gray-700">
-                                <?= get_post_data($post, 'author'); ?>
-                            </>
-                        </span>
-                        <span class="">/</span>
-                        <span class="whitespace-nowrap">
-                            Published on <?= get_post_data($post, 'publish_date'); ?>
-                        </span>
+                        <?php
+                        // Check if the 'author' key exists in the $post array
+                        if (isset($post['author'])) {
+                            // echo 'Posted by ' + get_post_data($post, 'author') + '/';
+                            // Assuming 'get_post_data()' returns the author's name
+                            echo 'Posted by ' . get_post_data($post, 'author') . '/';
+                        }
+                        ?>
+                        <?php
+                        // Check if the 'publish_date' key exists in the $post array
+                        if (isset($post['publish_date'])) {
+                            // Assuming 'get_post_data()' returns the publish date
+                            echo 'Published on ' . get_post_data($post, 'publish_date');
+                        }
+                        ?>
                     </div>
                 </div>
             </div>

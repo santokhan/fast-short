@@ -1,7 +1,15 @@
 <?php // http://localhost:8001?hash=abc123 ?>
 
+<?php 
+include './src/utils/get_original_url.php';
+?>
+
 <?php
 $hash = isset($_GET['hash']) ? $_GET['hash'] : '';
+
+$_SESSION['temp_hash'] = $hash;
+// Use the hash as needed
+// unset($_SESSION['temp_hash']); // Destroy the hash after use
 ?>
 
 <div class="mx-auto w-full max-w-screen-xl p-4">
