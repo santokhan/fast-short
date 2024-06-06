@@ -4,6 +4,7 @@ import getURL from '@/actions/query/getURL';
 import NavbarSpace from '@/components/NavbarSpace'
 import Section from '@/components/Section'
 import CopyButton from '@/components/button/CopyButton';
+import Link from 'next/link';
 
 export default async function GeneratedPage({ params }) {
   if (params && params.id) {
@@ -36,20 +37,19 @@ export default async function GeneratedPage({ params }) {
                   />
                 </svg>
                 <div className='mt-4 flex flex-col items-center'>
-                  <h2 className='text-2xl text-slate-700 dark:text-navy-100'>Here is the shorter URL</h2>
+                  <h2 className='text-2xl text-slate-700'>Here is the shorter URL</h2>
                   <p className='mt-2'>
                     You can easily copy it by clicking the copy button
                   </p>
-                  {
-                    res.URL &&
-                    <div className='flex items-center gap-2 mt-6'>
-                      <div className="px-4 py-3 bg-gray-50 flex items-center rounded-lg w-full max-w-[268px]">
-                        <p className='overflow-x-hidden whitespace-nowrap'>{res.URL || ""}</p>...
-                      </div>
-                      <CopyButton url={path} />
+
+                  <div className='flex items-center gap-2 mt-6'>
+                    <div className="px-4 py-3 bg-gray-50 flex items-center rounded-lg w-full max-w-[268px]">
+                      <p className='overflow-x-hidden whitespace-nowrap'>{res?.URL || ""}</p>...
                     </div>
-                  }
+                    <CopyButton url={path} />
+                  </div>
                 </div>
+                <p>Back to <Link href={path}>Home</Link></p>
               </div>
             </div>
           </Section>
@@ -60,7 +60,7 @@ export default async function GeneratedPage({ params }) {
         <main className='min-h-screen'>
           <NavbarSpace />
           <Section>
-            <p>Something went wrong!</p>
+            <p className='text-center bg-white rounded-lg p-4 text-red-800'>❌ The URL not found on database</p>
           </Section>
         </main>
       )
@@ -70,7 +70,7 @@ export default async function GeneratedPage({ params }) {
       <main className='min-h-screen'>
         <NavbarSpace />
         <Section>
-          <p>Something went wrong!</p>
+          <p className='text-center bg-white rounded-lg p-4 text-red-800'>❌ Can not read the [id] from query parameters</p>
         </Section>
       </main>
     )

@@ -50,7 +50,7 @@ const UrlShorterForm = () => {
 
                             storeToLocal(res)
 
-                            router.push(`/generating/${alias}`)
+                            router.push(`/generated/${alias}`)
                         }
                     }
                 } catch (error) {
@@ -73,7 +73,7 @@ const UrlShorterForm = () => {
 
                         storeToLocal(res)
 
-                        router.push(`/generating/${shortenedId}`)
+                        router.push(`/generated/${shortenedId}`)
                     }
                 } catch (err) {
                     console.error(err)
