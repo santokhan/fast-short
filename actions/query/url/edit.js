@@ -10,7 +10,8 @@ async function editURL({ id = '', URL = '' }) {
                     id
                 },
                 data: {
-                    URL
+                    URL,
+                    updatedAt: new Date()
                 }
             }
             const result = await prisma.urls.update(query)

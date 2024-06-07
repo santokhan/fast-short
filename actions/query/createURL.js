@@ -17,7 +17,9 @@ async function createURL({ url = '', domain = '', hash = '', alias = '', author 
                     domain,
                     hash,
                     alias,
-                    author
+                    author,
+                    createdAt: new Date(),
+                    updatedAt: new Date(),
                 }
             })
             return result
