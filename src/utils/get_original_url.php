@@ -1,16 +1,25 @@
 <?php
 
-function get_original_url($hash) {
+function get_original_url($hash)
+{
     // Assuming you have an API endpoint where you need to send the hash as a query parameter
-    $api_url = 'https://1xshort.com/get-url?hash=' . urlencode($hash);
+    $api_url_full = 'https://1xshort.com/api/get-url/?hash=' . urlencode($hash);
 
     // Initialize cURL session
     $ch = curl_init();
 
     // Set cURL options
-    curl_setopt($ch, CURLOPT_URL, $api_url);
+    curl_setopt($ch, CURLOPT_URL, $api_url_full);
+    // Set the option to follow redirects
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+
+    // Set the maximum number of redirects to follow
+    curl_setopt($ch, CURLOPT_MAXREDIRS, 10);
+
+    // Set other cURL options as needed
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_FAILONERROR, true);
+    curl_setopt($ch, CURLOPT_HEADER, false);
+
 
     // Execute the cURL request
     $response = curl_exec($ch);
@@ -25,7 +34,13 @@ function get_original_url($hash) {
         // Close the cURL session
         curl_close($ch);
         // Return the API response
-        return $response;
+        $res = json_decode($response, true);
+        if (isset($res['url'])) {
+            $url = $res['url'];
+            return $url;
+        } else {
+            return "";
+        }
     }
 }
 

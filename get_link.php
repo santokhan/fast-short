@@ -1,9 +1,5 @@
 <?php // http://localhost:8001?hash=abc123 ?>
 
-<?php 
-include './src/utils/get_original_url.php';
-?>
-
 <?php
 $hash = isset($_GET['hash']) ? $_GET['hash'] : '';
 

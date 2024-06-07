@@ -1,5 +1,12 @@
-<?php
-require_once './src/utils/get_original_url.php';
+<?php 
+include './src/utils/get_original_url.php';
+
+// if (function_exists('curl_version')) {
+//     echo 'cURL is enabled.';
+// } else {
+//     echo 'cURL is not enabled.';
+// }
+
 ?>
 
 <?php
@@ -9,10 +16,11 @@ $query = "";
 if (isset($_GET["hash"])) {
     $current_hash = $_GET["hash"];
     $query = "?hash=$current_hash";
+    $redirect = get_original_url($current_hash);
 }
 ?>
 
-<script>
+<!-- <script>
     function getURL() {
         const API = `https://www.1xshort.com/api/get-url/`;
         const url = new URL(window.location.href);
@@ -27,10 +35,10 @@ if (isset($_GET["hash"])) {
             }
         }).catch(console.error)
     }
-    window.addEventListener("load", getURL);
-</script>
+    // window.addEventListener("load", getURL);
+</script> -->
 
-<a href="/<?php echo $query; ?>" id="getLink" class="inline-flex items-center justify-center rounded-lg bg-blue-700 px-4 py-2.5 text-center text-base font-medium text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 flex gap-2 items-center rotate">
+<a href="<?php echo $redirect; ?>" id="getLink" class="inline-flex items-center justify-center rounded-lg bg-blue-700 px-4 py-2.5 text-center text-base font-medium text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 flex gap-2 items-center rotate">
     <span class="whitespace-nowrap">Get link</span>
     <?php include './src/arrow_angle.php'; ?>
 </a>
