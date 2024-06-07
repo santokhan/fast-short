@@ -8,10 +8,11 @@ generator client {
 }
 
 model urls {
-    id     String  @id @default(auto()) @map("_id") @db.ObjectId
-    URL    String
-    domain String
-    hash   String?
-    alias  String?
-    author String?
+    id      String  @id @default(auto()) @map("_id") @db.ObjectId
+    URL     String
+    domain  String
+    hash    String?
+    alias   String?
+    author  String?
+    visited Boolean @default(false) // Ads website will request to make it true
 }
