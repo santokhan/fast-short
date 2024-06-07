@@ -26,6 +26,9 @@ ini_set('display_errors', 1);
             case '/':
                 include 'home.php';
                 break;
+            case '/get-link':
+                include 'get_link.php';
+                break;
             case '/about':
                 include 'about.php';
                 break;
@@ -48,7 +51,7 @@ ini_set('display_errors', 1);
             <div class="">
                 <?php include 'includes/ads1.php'; ?>
             </div>
-            <?php 
+            <?php
             //include 'includes/ads2.php'; 
             ?>
             <div class="">

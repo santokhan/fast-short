@@ -4,10 +4,6 @@
 include './src/utils/get_original_url.php';
 ?>
 
-<?php 
-session_start();
-?>
-
 <?php
 $hash = isset($_GET['hash']) ? $_GET['hash'] : '';
 
@@ -28,6 +24,6 @@ setcookie('temp_hash', $hash, time() + (86400 * 1), '/'); // Cookie expires in 1
     <?php include 'includes/job_cards.php'; ?>
 
     <div class="flex justify-center itmes-center">
-        <?php include './src/continue-button.php'; ?>
+        <?php include './src/get_link_button.php'; ?>
     </div>
 </div>
