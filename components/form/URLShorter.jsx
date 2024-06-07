@@ -63,7 +63,7 @@ const UrlShorterForm = () => {
                 try {
                     const shortenedId = shortenUrlToId(url)
 
-                    const res = await createURL({ url, domain, shortenedId, alias: '', author })
+                    const res = await createURL({ url, domain, hash:shortenedId, alias: '', author })
 
                     if (res) {
                         setLoading(false)

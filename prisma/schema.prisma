@@ -11,7 +11,7 @@ model urls {
     id     String  @id @default(auto()) @map("_id") @db.ObjectId
     URL    String
     domain String
-    hash   String? @unique
+    hash   String?
     alias  String?
     author String?
 }

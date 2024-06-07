@@ -38,7 +38,6 @@ export default function ManageLinksTable() {
       const email = data.user?.email
       try {
         const res = await getURLsByAuthor({ author: email })
-        console.log(res)
         if (res) {
           setURLs(res)
         }
@@ -62,7 +61,7 @@ export default function ManageLinksTable() {
           <tbody className="divide-y">
             {
               URLs.map((_, i) => {
-                const redirectURL = `https://${_.domain}/${_.alias || _.hash}`
+                const redirectURL = `https://${_.domain}/?hash=${_.alias || _.hash}`
                 return (
                   <Fragment key={i}>
                     <TableRow URL={_.URL} redirectURL={redirectURL} id={_.id}

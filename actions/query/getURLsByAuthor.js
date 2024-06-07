@@ -8,7 +8,7 @@ async function getURLsByAuthor({ author = '' }) {
             const query = {
                 where: {
                     author: author
-                }
+                },
             }
             const result = await prisma.urls.findMany(query)
             return result
