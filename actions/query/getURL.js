@@ -2,21 +2,21 @@
 
 import prisma from "@/prisma/prismaClient"
 
-async function getURL(id = '') {
-    if (!id) {
+async function getURL(hash = '') {
+    if (!hash) {
         console.error('Invalid parameters provided to checkAlias')
         return
     } else {
         try {
             const result = await prisma.urls.findFirst({
-                where: { hash: id }
+                where: { hash: hash }
             })
 
             if (result) {
                 return result;
             } else {
                 const res = await prisma.urls.findFirst({
-                    where: { alias: id }
+                    where: { alias: hash }
                 })
 
                 return res

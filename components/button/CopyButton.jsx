@@ -17,17 +17,15 @@ const CopyButton = ({ textToCopy, url = '' }) => {
     }
 
     return (
-        <div>
-            <button
-                type='button'
-                className={`flex justify-center items-center px-6 py-3 rounded-lg bg-button font-medium text-white ${
-                    isCopied ? 'opacity-75' : ''
-                }`}
-                onClick={handleCopy}
-            >
-                {isCopied ? 'Copied' : 'Copy'}
-            </button>
-        </div>
+        <button
+            type='button'
+            className={`flex justify-center items-center px-5 py-3 rounded-lg bg-button font-medium text-white ${
+                isCopied ? 'opacity-75' : ''
+            }`}
+            onClick={handleCopy}
+        >
+            {isCopied ? 'Copied' : 'Copy'}
+        </button>
     )
 }
 

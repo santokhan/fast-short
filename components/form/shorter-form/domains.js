@@ -5,4 +5,8 @@ const domains = [
     }
 ]
 
+const adsURL = ['https://fastshort.xyz']
+
 export default domains
+
+export { adsURL }
