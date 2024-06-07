@@ -87,3 +87,10 @@ This setup is lightweight and straightforward, perfect for small projects withou
 ```bash
 php -S localhost:8000
 ```
+
+## Command to secure copy with SSH
+
+```bash
+scp -r /* root@00.00.00.00/home/dev/php/
+```
+
