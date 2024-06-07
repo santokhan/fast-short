@@ -14,7 +14,7 @@ if (isset($_GET["hash"])) {
 
 <script>
     function getURL() {
-        const API = `https://1xshort.com/get-url/`;
+        const API = `https://www.1xshort.com/api/get-url/`;
         const url = new URL(window.location.href);
         const searchParams = new URLSearchParams(url.search);
         const fullURL = API + '?' + searchParams.toString();
