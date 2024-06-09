@@ -53,10 +53,11 @@ ini_set('display_errors', 1);
             <div class="">
                 <?php // include './src/adsterra-ads/ads1.php'; ?>
             </div>
-            <?php
-            ?>
             <div class="">
                 <?php // include './src/adsterra-ads/ads_popunder.php'; ?>
+            </div>
+            <div class="">
+                <?php include './src/adsense-ads/multiple-ads.php'; ?>
             </div>
         </div>
     </main>
