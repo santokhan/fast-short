@@ -49,13 +49,12 @@ ini_set('display_errors', 1);
 
         <div class="mx-auto w-full max-w-screen-xl p-4 flex flex-col items-center">
             <div class="">
-                <?php include 'includes/ads1.php'; ?>
+                <?php include './src/adsterra-ads/ads1.php'; ?>
             </div>
             <?php
-            //include 'includes/ads2.php'; 
             ?>
             <div class="">
-                <?php include 'includes/ads_popunder.php'; ?>
+                <?php include './src/adsterra-ads/ads_popunder.php'; ?>
             </div>
         </div>
     </main>

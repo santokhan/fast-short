@@ -13,7 +13,7 @@ $path = $path_array['path'];
         ?>
         <div class="">
             <?php
-            include 'includes/ads2.php';
+            include './src/adsterra-ads/ads2.php';
             ?>
         </div>
         <?php
