@@ -57,7 +57,7 @@ export default async function GeneratedPage({ params }) {
                       <div className="px-4 py-3 bg-gray-50 flex items-center rounded-lg w-full max-w-lg">
                         <p className='w-full overflow-x-hidden text-ellipsis whitespace-nowrap'>{URLWithHash}</p>
                       </div>
-                      <CopyButton url={path} />
+                      <CopyButton url={URLWithHash} />
                       <RedirectButton redirectURL={URLWithHash} />
                     </div>
                   </div>
