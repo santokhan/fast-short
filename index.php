@@ -10,6 +10,7 @@ ini_set('display_errors', 1);
 <head>
     <?php include './src/adsense-script.php'; ?>
     <?php include './includes/head.php'; ?>
+    <?php include './src/analytics.php'; ?>
 </head>
 
 <body class="bg-gray-50">
