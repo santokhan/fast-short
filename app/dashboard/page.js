@@ -6,7 +6,7 @@ import { useSession } from "next-auth/react";
 const Card = {
   Box({ children }) {
     return (
-      <div className="basis-60 flex flex-1 items-center justify-between gap-8 rounded-lg bg-white p-4 lg:p-6 shadow">
+      <div className="basis-24 max-w-sm flex-grow flex items-center justify-between gap-8 rounded-lg bg-white p-4 lg:p-6 shadow">
         {children}
       </div>
     );
