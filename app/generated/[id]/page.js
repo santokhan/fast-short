@@ -12,7 +12,6 @@ import Link from 'next/link';
 export default async function GeneratedPage({ params }) {
   if (params && params.id) {
     const id = params.id || "";
-    const path = '/' + id;
 
     if (!id) {
       return null;
@@ -22,8 +21,8 @@ export default async function GeneratedPage({ params }) {
       const res = await getURL(decodedHash)
 
       if (res) {
-        const realURL = res?.URL || ""
         const URLWithHash = adsURL[0] + '?hash=' + (res.alias || res.hash);
+        const URLShorten = adsURL[0] + '/s/' + (res.alias || res.hash);
 
         return (
           <main className='min-h-screen'>

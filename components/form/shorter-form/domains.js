@@ -5,7 +5,7 @@ const domains = [
     }
 ]
 
-const adsURL = ['https://fastshort.xyz']
+const adsURL = ['fastshort.xyz']
 
 export default domains
 

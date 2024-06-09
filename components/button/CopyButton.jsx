@@ -1,11 +1,11 @@
 'use client'
 import { useState } from 'react'
 
-const CopyButton = ({ textToCopy, url = '' }) => {
+const CopyButton = ({ url = '' }) => {
     const [isCopied, setIsCopied] = useState(false)
 
     const handleCopy = () => {
-        window.navigator.clipboard.writeText(textToCopy).then(() => {
+        window.navigator.clipboard.writeText(url).then(() => {
             setIsCopied(true)
             setTimeout(() => setIsCopied(false), 2000)
         })
