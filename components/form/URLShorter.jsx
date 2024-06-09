@@ -55,6 +55,7 @@ const UrlShorterForm = () => {
                     }
                 } catch (error) {
                     console.error(error)
+                    setLoading(true)
                 }
             } else {
                 setLoading(true)
@@ -83,6 +84,7 @@ const UrlShorterForm = () => {
                     }
                 } catch (err) {
                     console.error(err)
+                    setLoading(true)
                 }
             }
         }
@@ -103,7 +105,7 @@ const UrlShorterForm = () => {
             <form onSubmit={handleSubmit} className='flex flex-wrap gap-6'>
                 <label className='w-full flex flex-col items-start'>
                     <input
-                        type='url'
+                        type='text'
                         name='url'
                         value={url}
                         onChange={(e) => {
@@ -113,6 +115,7 @@ const UrlShorterForm = () => {
                         className={twMerge(inputStyle)}
                         placeholder={placeholder.url}
                         required
+                        pattern='^[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$'
                     />
                 </label>
                 <label className='flex-1'>
