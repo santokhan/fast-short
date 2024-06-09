@@ -31,7 +31,7 @@ export default async function GeneratedPage({ params }) {
             <Section>
               <div className='mx-auto max-w-2xl'>
                 <div
-                  className='relative flex flex-col rounded-lg bg-white px-4 py-10 text-center transition-opacity duration-300 sm:px-5'
+                  className='w-full overflow-x-hidden relative flex flex-col rounded-lg bg-white px-4 py-10 text-center transition-opacity duration-300 sm:px-5'
                 >
                   <svg
                     xmlns='http://www.w3.org/2000/svg'

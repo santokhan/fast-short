@@ -28,7 +28,7 @@ export default async function URLShortFormPage({ searchParams }) {
           <div className="mt-10 ad-script-setup"></div>
         </div>
         {/* Ads End */}
-        <Script
+        {/* <Script
           id="ad-script-setup"
           strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
@@ -42,7 +42,7 @@ export default async function URLShortFormPage({ searchParams }) {
               };
             `,
           }}
-        />
+        /> */}
         {/* <AdsF1 /> */}
         {/* <AdsF1 /> */}
         {/* <AdsF1 /> */}
