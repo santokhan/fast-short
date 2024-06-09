@@ -62,7 +62,7 @@ const UrlShorterForm = () => {
 
                 // Shorten the URL to a unique ID
                 try {
-                    const shortenedId = shortenUrlToId(url)
+                    const shortenedId = shortenUrlToId(url + new Date().getTime())
 
                     const res = await createURL({
                         url,
