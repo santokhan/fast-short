@@ -11,7 +11,7 @@ $path = $path_array['path'];
             include './src/scroll-button.php';
         }
         ?>
-        <div class="">
+        <div class="w-96">
             <?php include './src/adsense-ads/top-ads.php'; ?>
         </div>
         <?php
