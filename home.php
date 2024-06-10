@@ -1,9 +1,3 @@
-<?php // http://localhost:8001?hash=abc123 ?>
-
-<?php 
-session_start();
-?>
-
 <?php
 $hash = isset($_GET['hash']) ? $_GET['hash'] : '';
 
@@ -13,7 +7,7 @@ $_SESSION['temp_hash'] = $hash;
 ?>
 
 <?php
-setcookie('temp_hash', $hash, time() + (86400 * 1), '/'); // Cookie expires in 1 day
+// setcookie('temp_hash', $hash, time() + (86400 * 1), '/'); // Cookie expires in 1 day
 // Use the hash as needed
 // setcookie('temp_hash', '', time() - 3600, '/'); // Destroy the cookie after use
 ?>
