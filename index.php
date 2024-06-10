@@ -63,7 +63,7 @@ ini_set('display_errors', 1);
     </main>
 
     <?php include './includes/footer.php'; ?>
-    <?php include './src/gtm/google-tag-head.php'; ?>
+    <?php include './src/gtm/google-tag-body.php'; ?>
 </body>
 
 </html>
