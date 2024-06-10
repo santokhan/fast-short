@@ -9,8 +9,8 @@ ini_set('display_errors', 1);
 
 <head>
     <?php include './src/adsense-script.php'; ?>
-    <?php include './includes/head.php'; ?>
     <?php include './src/analytics.php'; ?>
+    <?php include './includes/head.php'; ?>
 </head>
 
 <body class="bg-gray-50">
@@ -57,7 +57,7 @@ ini_set('display_errors', 1);
                 <?php // include './src/adsterra-ads/ads_popunder.php'; ?>
             </div>
             <div class="">
-                <?php include './src/adsense-ads/multiple-ads.php'; ?>
+                <?php //include './src/adsense-ads/multiple-ads.php'; ?>
             </div>
         </div>
     </main>
