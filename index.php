@@ -58,9 +58,6 @@ ini_set('display_errors', 1);
                 <?php // include './src/adsterra-ads/ads_popunder.php'; 
                 ?>
             </div>
-            <div class="w-full">
-                <?php include './src/adsense-ads/multiple-ads.php'; ?>
-            </div>
         </div>
     </main>
 
