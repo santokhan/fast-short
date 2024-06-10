@@ -8,7 +8,7 @@ ini_set('display_errors', 1);
 <html lang="en">
 
 <head>
-    <?php include './src/adsense-script.php'; ?>
+    <?php // include './src/adsense-script.php'; ?>
     <?php include './src/analytics.php'; ?>
     <?php include './includes/head.php'; ?>
 </head>
