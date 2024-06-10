@@ -57,7 +57,7 @@ ini_set('display_errors', 1);
                 <?php // include './src/adsterra-ads/ads_popunder.php'; ?>
             </div>
             <div class="">
-                <?php //include './src/adsense-ads/multiple-ads.php'; ?>
+                <?php include './src/adsense-ads/multiple-ads.php'; ?>
             </div>
         </div>
     </main>
