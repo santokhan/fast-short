@@ -8,12 +8,12 @@ ini_set('display_errors', 1);
 <html lang="en">
 
 <head>
+    <?php include './src/adsense-script.php'; ?>
     <?php include './src/analytics.php'; ?>
     <?php include './includes/head.php'; ?>
 </head>
 
 <body class="bg-gray-50">
-    <?php include './src/adsense-script.php'; ?>
     <?php include './includes/header.php'; ?>
 
     <main>
