@@ -12,9 +12,7 @@ $path = $path_array['path'];
         }
         ?>
         <div class="">
-            <?php
-            // include './src/adsterra-ads/ads2.php';
-            ?>
+            <?php include './src/adsense-ads/top-ads.php'; ?>
         </div>
         <?php
         if ($path == '' || $path == '/') {

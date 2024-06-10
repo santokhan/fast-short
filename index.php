@@ -8,12 +8,12 @@ ini_set('display_errors', 1);
 <html lang="en">
 
 <head>
-    <?php // include './src/adsense-script.php'; ?>
     <?php include './src/analytics.php'; ?>
     <?php include './includes/head.php'; ?>
 </head>
 
 <body class="bg-gray-50">
+    <?php include './src/adsense-script.php'; ?>
     <?php include './includes/header.php'; ?>
 
     <main>
@@ -51,10 +51,12 @@ ini_set('display_errors', 1);
 
         <div class="mx-auto w-full max-w-screen-xl p-4 flex flex-col items-center">
             <div class="">
-                <?php // include './src/adsterra-ads/ads1.php'; ?>
+                <?php // include './src/adsterra-ads/ads1.php'; 
+                ?>
             </div>
             <div class="">
-                <?php // include './src/adsterra-ads/ads_popunder.php'; ?>
+                <?php // include './src/adsterra-ads/ads_popunder.php'; 
+                ?>
             </div>
             <div class="w-full">
                 <?php include './src/adsense-ads/multiple-ads.php'; ?>
