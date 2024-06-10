@@ -15,29 +15,9 @@ $_SESSION['temp_hash'] = $hash;
 <div class="mx-auto w-full max-w-screen-xl p-4">
     <h1 class="text-3xl font-bold text-center hidden">Shorten a long URL</h1>
 
-    <?php include 'includes/job_cards.php'; ?>
+    <?php include './includes/job_cards.php'; ?>
+    <?php include './src/countdown.php'; ?>
 
-    <div id="countdown" class="text-center">Please wait 10 seconds</div>
-
-    <script>
-        // Initial countdown value
-        let countdownValue = 10;
-
-        // Function to update the countdown
-        function updateCountdown() {
-            if (countdownValue >= 0) {
-                document.getElementById('countdown').textContent = `Please wait ${countdownValue} seconds`;
-                countdownValue--;
-            } else {
-                clearInterval(countdownInterval);
-                document.getElementById('countdown').textContent = "";
-                document.getElementById('')
-            }
-        }
-
-        // Update the countdown every second
-        const countdownInterval = setInterval(updateCountdown, 1000);
-    </script>
     <div class="flex justify-center itmes-center">
         <?php include './src/continue-button.php'; ?>
     </div>
