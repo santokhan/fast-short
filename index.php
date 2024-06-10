@@ -11,6 +11,7 @@ ini_set('display_errors', 1);
     <?php include './src/adsense-script.php'; ?>
     <?php include './src/analytics.php'; ?>
     <?php include './includes/head.php'; ?>
+    <?php include './src/gtm/google-tag-head.php'; ?>
 </head>
 
 <body class="bg-gray-50">
@@ -62,6 +63,7 @@ ini_set('display_errors', 1);
     </main>
 
     <?php include './includes/footer.php'; ?>
+    <?php include './src/gtm/google-tag-head.php'; ?>
 </body>
 
 </html>
