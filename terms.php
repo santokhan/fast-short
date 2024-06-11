@@ -13,4 +13,6 @@
 
         <p class="text-sm text-gray-700 mt-8">By accessing or using our service, you agree to be bound by these terms. If you have any questions about these Terms, please contact us.</p>
     </section>
+    
+    <?php include './src/adsense-ads/multiple-ads.php'; ?>
 </main>

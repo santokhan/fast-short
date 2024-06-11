@@ -15,4 +15,6 @@
 
         <p class="text-sm text-gray-700 mt-8">By using our site, you agree to the collection and use of information in accordance with this policy. If you have any questions about this Privacy Policy, please contact us.</p>
     </section>
+
+    <?php include './src/adsense-ads/multiple-ads.php'; ?>
 </main>

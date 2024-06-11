@@ -17,4 +17,5 @@
 
         <p class="text-sm text-gray-700 mt-8">Thank you for choosing FastShort for your job search needs. We're here to help you find your next opportunity quickly and efficiently!</p>
     </section>
+    <?php include './src/adsense-ads/multiple-ads.php'; ?>
 </div>
