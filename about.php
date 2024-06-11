@@ -1,18 +1,20 @@
 <div class="min-h-screen">
     <section class="max-w-2xl px-4 mx-auto mt-12">
-        <p class="text-lg mb-4">1x Short is the fastest URL shortener for creating custom, shareable short links. Our mission is to provide users with a simple and efficient tool to shorten URLs, making them easier to share and manage.</p>
-        <h2 class="text-xl font-semibold mb-2">Why Choose 1x Short?</h2>
-        <p class="mb-4">We focus on user experience, and we're always here to help. Our team of experts are available to answer any questions you may have.</p>
-        <h2 class="text-xl font-semibold mb-2">Key Features</h2>
-        <ul class="list-disc pl-6 mb-4">
-            <li>Fast URL Shortening</li>
-            <li>Custom Short Links</li>
-            <li>Easy Link Management</li>
-            <li>Efficient URL Redirection</li>
+        <h1 class="text-2xl font-semibold mb-8">About Us</h1>
+
+        <p class="mb-4">FastShort is your go-to platform for finding job opportunities quickly and easily. Our mission is to streamline the job search process and connect talented individuals with top employers.</p>
+
+        <h2 class="text-xl font-semibold mb-4">Our Team</h2>
+        <p class="mb-4">At FastShort, we have a dedicated team of professionals who are passionate about helping job seekers and employers alike. From our developers to our customer support specialists, each member of our team plays a vital role in making FastShort a success.</p>
+
+        <h2 class="text-xl font-semibold mb-4">Contact Us</h2>
+        <p class="mb-4">If you have any questions, suggestions, or feedback, please feel free to reach out to us:</p>
+        <ul class="list-disc pl-4">
+            <li>Email: <a href="mailto:1xshort@gmail.com">1xshort@gmail.com</a></li>
+            <li>Phone: <a href="tel:+8801307230077">+8801307230077</a></li>
+            <li>Address: Dhaka, Bangladesh</li>
         </ul>
-        <h2 class="text-xl font-semibold mb-2">Our Mission</h2>
-        <p class="mb-4">Our mission is to simplify the process of sharing links by providing a fast, reliable, and user-friendly URL shortening service. We believe that every link should be accessible and easy to share, regardless of its length.</p>
-        <h2 class="text-xl font-semibold mb-2">Contact Us</h2>
-        <p class="mb-4">Have questions or feedback? Feel free to reach out to us at support@1xshort.com. We're always here to help!</p>
+
+        <p class="text-sm text-gray-700 mt-8">Thank you for choosing FastShort for your job search needs. We're here to help you find your next opportunity quickly and efficiently!</p>
     </section>
-</di>
+</div>
