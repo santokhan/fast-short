@@ -29,7 +29,7 @@ ini_set('display_errors', 1);
                 include 'home.php';
                 break;
             case '/generating-link':
-                include './src/pages/generating-link.php';
+                include 'generating-link.php';
                 break;
             case '/get-link':
                 include 'get_link.php';
