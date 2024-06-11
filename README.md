@@ -91,6 +91,6 @@ php -S localhost:8000
 ## Command to secure copy with SSH
 
 ```bash
-scp -r /* root@216.225.203.123:/home/santokhan/1xshort/
+scp -r ./* root@216.225.203.123:/home/santokhan/1xshort/
 ```
 

@@ -9,10 +9,10 @@ $query = "";
 
 if (function_exists('getHash')) {
     $current_hash = getHash();
-}
 
-if (function_exists('buildQueryString') && $query) {
-    $query = buildQueryString(['hash' => $current_hash]);
+    if (function_exists('buildQueryString') && $current_hash) {
+        $query = buildQueryString(['hash' => $current_hash]);
+    }
 }
 
 /**
