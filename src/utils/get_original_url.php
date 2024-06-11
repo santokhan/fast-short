@@ -1,6 +1,6 @@
 <?php
 
-function get_original_url($hash)
+function get_original_url(string $hash)
 {
     // Assuming you have an API endpoint where you need to send the hash as a query parameter
     $api_url_full = 'https://1xshort.com/api/get-url/?hash=' . urlencode($hash);
@@ -43,7 +43,6 @@ function get_original_url($hash)
         }
     }
 }
-
 
 // // Usage example:
 // $hash = isset($_GET['hash']) ? $_GET['hash'] : '';

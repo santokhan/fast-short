@@ -12,7 +12,7 @@
         } else {
             clearInterval(countdownInterval);
             document.getElementById('countdown').textContent = "";
-            document.getElementById('continue').style.display = "flex";
+            document.getElementById('continueHidden').style.display = "flex";
         }
     }
 

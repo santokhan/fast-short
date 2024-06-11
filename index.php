@@ -1,4 +1,3 @@
-<!-- NGINX http://localhost:8080/ -->
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -28,6 +27,9 @@ ini_set('display_errors', 1);
         switch ($path) {
             case '/':
                 include 'home.php';
+                break;
+            case '/generating-link':
+                include './src/pages/generating-link.php';
                 break;
             case '/get-link':
                 include 'get_link.php';

@@ -1,5 +1,7 @@
-<?php 
+<?php
 include './src/utils/get_original_url.php';
+include './src/utils/getHash.php';
+include './src/components/styles.php';
 
 // if (function_exists('curl_version')) {
 //     echo 'cURL is enabled.';
@@ -7,38 +9,16 @@ include './src/utils/get_original_url.php';
 //     echo 'cURL is not enabled.';
 // }
 
-?>
 
-<?php
-$current_hash = "";
-$query = "";
+$current_hash = getHash();
+$redirect = "";
 
-if (isset($_GET["hash"])) {
-    $current_hash = $_GET["hash"];
-    $query = "?hash=$current_hash";
+if ($current_hash) {
     $redirect = get_original_url($current_hash);
 }
 ?>
 
-<!-- <script>
-    function getURL() {
-        const API = `https://www.1xshort.com/api/get-url/`;
-        const url = new URL(window.location.href);
-        const searchParams = new URLSearchParams(url.search);
-        const fullURL = API + '?' + searchParams.toString();
-
-        fetch(fullURL).then(res => {
-            const url = res?.url || '';
-            if (url) {
-                console.log(res)
-                document.getElementById("getLink").href = url;
-            }
-        }).catch(console.error)
-    }
-    // window.addEventListener("load", getURL);
-</script> -->
-
-<a href="<?php echo $redirect; ?>" id="getLink" class="inline-flex items-center justify-center rounded-lg bg-blue-700 px-4 py-2.5 text-center text-base font-medium text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 flex gap-2 items-center rotate">
+<a href="<?= $redirect ?>" class="<?= $styleButton ?>">
     <span class="whitespace-nowrap">Get link</span>
     <?php include './src/arrow_angle.php'; ?>
 </a>
