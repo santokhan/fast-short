@@ -18,7 +18,7 @@ if ($current_hash) {
 }
 ?>
 
-<a href="<?= $redirect ?>" class="<?= $styleButton ?>">
+<a href="<?= $redirect ?>" class="<?= $styleButton ?> hidden whitespace-nowrap" id="getLink">
     <span class="whitespace-nowrap">Get link</span>
     <?php include './src/arrow_angle.php'; ?>
 </a>
