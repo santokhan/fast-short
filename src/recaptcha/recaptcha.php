@@ -29,6 +29,7 @@ include './src/components/styles.php';
                 if (data.status === 'success') {
                     console.log('Form submission successful');
                     // Optionally, show success message or update UI
+                    document.getElementById("getLink").style.display = "block";
                 } else {
                     console.error('Form submission failed:', data.message);
                     // Optionally, show error message or update UI
