@@ -46,6 +46,9 @@ ini_set('display_errors', 1);
             case '/privacy-policy':
                 include 'privacy.php';
                 break;
+            case '/hcaptcha-verify':
+                include 'hcaptcha-verify.php';
+                break;
             default:
                 include '404.php';
                 break;
