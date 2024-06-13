@@ -6,8 +6,13 @@ $full_path = $_SERVER['REQUEST_URI']; // /?hash=abc123
 $path_array = parse_url($full_path); // Array(2) { ["path"]=> string(1) "/" ["query"]=> string(11) "hash=abc123" }
 $path = $path_array['path'];
 
-if ($path == '/verify'){
+if ($path == '/verify') {
     include './src/recaptcha/verify.php';
+    exit;
+}
+
+if ($path == '/sitemap.xml') {
+    echo file_get_contents('/sitemap.xml');
     exit;
 }
 ?>
@@ -17,10 +22,10 @@ if ($path == '/verify'){
 
 <head>
     <?php
-include './src/adsense-script.php';
-include './src/analytics.php';
-include './includes/head.php';
-include './src/gtm/google-tag-head.php';
+    include './src/adsense-script.php';
+    include './src/analytics.php';
+    include './includes/head.php';
+    include './src/gtm/google-tag-head.php';
     ?>
 </head>
 
