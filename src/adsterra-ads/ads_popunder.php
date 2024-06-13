@@ -1,1 +1,0 @@
-<script type='text/javascript' src='//pl23436309.highcpmgate.com/28/fb/75/28fb75d0469156899b6142b2d2969171.js'></script>
