@@ -1,10 +1,12 @@
 <?php
 include './src/components/styles.php';
+
+$style = 'inline-flex justify-center items-center gap-4 px-4 py-4 bg-white rounded-lg text-lg shadow';
 ?>
 
 <form id="myForm">
-    <div class="flex flex-col justify-center items-center">
-        <button class="g-recaptcha <?php echo $styleButton; ?>" data-sitekey="6LcWE_gpAAAAAFIpkGc7Dg3S7A5Jcgl_gSiwXwHd" data-callback='onSubmit' data-action='submit'>Verify reCAPTCHA</button>
+    <div class="flex justify-center items-center">
+        <button class="g-recaptcha <?= $style ?>" data-sitekey="6LcWE_gpAAAAAFIpkGc7Dg3S7A5Jcgl_gSiwXwHd" data-callback='onSubmit' data-action='submit'><span class="size-6 border bg-gray-50 rounded"></span> I&apos;m not a robot</button>
     </div>
 </form>
 
