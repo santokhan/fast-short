@@ -21,7 +21,7 @@ export { NoRecordsFound }
 
 const ManageLinksContainer = ({ children }) => {
   return (
-    <div>
+    <div className="mt-8">
       <h2 className="text-2xl font-semibold">Manage Links</h2>
       {children}
     </div>

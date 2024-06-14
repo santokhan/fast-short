@@ -118,7 +118,7 @@ const UrlShorterForm = () => {
     }
 
     return (
-        <div className='mx-auto max-w-2xl'>
+        <div className='max-w-2xl'>
             <div className='p-4 lg:p-8 rounded-xl bg-white space-y-6 border'>
                 <FormTitle>Shorten a long URL</FormTitle>
                 <form onSubmit={handleSubmit} className='flex flex-wrap gap-6'>

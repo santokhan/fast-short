@@ -13,7 +13,7 @@ export default async function URLShortFormPage({ searchParams }) {
       <NavBar />
       <main className='min-h-screen'>
         <NavbarSpace />
-        <Section className='space-y-8'>
+        <Section className='space-y-8 flex justify-center'>
           <AuthProvider>
             <URLShort />
           </AuthProvider>
