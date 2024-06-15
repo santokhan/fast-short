@@ -32,7 +32,7 @@ if ($path == '/verify') {
 <body class="bg-gray-50">
     <?php include './includes/header.php'; ?>
     
-    <main class="h-screen !min-h-screen">
+    <div class="h-screen !min-h-screen">
         <?php
 
         include './src/ads-scroll-to-bottom.php';
@@ -67,7 +67,7 @@ if ($path == '/verify') {
                 break;
         }
         ?>
-    </main>
+    </div>
 
     <?php
     include './includes/footer.php';
