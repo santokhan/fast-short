@@ -1,2 +1,3 @@
-User-agent: *
-Disallow:
+User-agent: *  # Applies rules to all robots (including Googlebot)
+Disallow:     # Ensures no specific paths are disallowed for all robots
+Allow: *.googlesyndication.com  # Explicitly allows all paths under googlesyndication.com
