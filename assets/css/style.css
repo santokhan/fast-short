@@ -660,6 +660,10 @@ video {
   min-height: 100vh;
 }
 
+.\!min-h-screen {
+  min-height: 100vh !important;
+}
+
 .w-96 {
   width: 24rem;
 }
