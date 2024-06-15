@@ -15,17 +15,17 @@ function get_post_data($post = [], $key = '')
     }
 }
 
-$url = "";
+$url = "/job?id=";
 // $url = get_post_data($post, 'id');
 ?>
 
 <div class="flex flex-wrap items-stretch -mx-4 mt-4">
     <?php foreach ($job_posts as $post) : ?>
-        <article id="post-<?= $url ?>" class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
+        <article id="post-<?= $post['id'] ?>" class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
             <div class="bg-white shadow-md rounded-md p-4 lg:p-6 h-full">
                 <div class="flex flex-col h-full gap-4">
                     <h2 class="text-xl font-semibold">
-                        <a href="<?= $url ?>" class="text-blue-500 hover:underline">
+                        <a href="<?= $url . $post['id'] ?>" class="text-blue-500 hover:underline">
                             <?= get_post_data($post, 'title'); ?>
                         </a>
                     </h2>
