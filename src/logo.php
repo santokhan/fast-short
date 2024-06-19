@@ -1,0 +1,1 @@
+<a href="/"><img src="/assets/images/logo.png" alt="logo" class="w-32 lg:w-44 object-contain"></a>

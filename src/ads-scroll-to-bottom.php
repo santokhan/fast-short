@@ -4,7 +4,7 @@ $path_array = parse_url($full_path); // Array(2) { ["path"]=> string(1) "/" ["qu
 $path = $path_array['path'];
 ?>
 
-<div class="mx-auto w-full max-w-screen-xl p-4">
+<div class="mx-auto w-full max-w-screen-xl px-4 overflow-hidden">
     <div class="flex justify-center items-center gap-4">
         <?php
         if ($path == '' || $path == '/') {

@@ -34,11 +34,8 @@ if ($path == '/verify') {
 <body class="bg-gray-50">
     <?php include './includes/header.php'; ?>
     
-    <div class="h-screen !min-h-screen">
+    <div class="!min-h-screen">
         <?php
-
-        include './src/ads-scroll-to-bottom.php';
-
         switch ($path) {
             case '/':
                 include 'home.php';
