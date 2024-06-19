@@ -27,10 +27,7 @@ if ($path == '/verify') {
 
 <head>
     <?php
-    include './src/adsense-script.php';
-    include './src/analytics.php';
     include './includes/head.php';
-    include './src/gtm/google-tag-head.php';
     ?>
 </head>
 
@@ -76,7 +73,6 @@ if ($path == '/verify') {
 
     <?php
     include './includes/footer.php';
-    include './src/gtm/google-tag-body.php';
     ?>
 </body>
 
