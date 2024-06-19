@@ -9,6 +9,9 @@
 <meta name="description" content="Explore thousands of job opportunities on MyTeamJob. Search for jobs, browse job listings, and apply online.">
 <meta name="keywords" content="job search, job postings, job opportunities, careers, employment">
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2093401447368343"
+     crossorigin="anonymous"></script>
+
 <meta property="og:title" content="Find Jobs - MyTeamJob">
 <meta property="og:description" content="Explore thousands of job opportunities on MyTeamJob. Search for jobs, browse job listings, and apply online.">
 <meta property="og:type" content="website">
