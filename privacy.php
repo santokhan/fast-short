@@ -1,6 +1,6 @@
 <main class="min-h-screen">
     <section class="max-w-2xl px-4 mx-auto mt-12">
-        <h1 class="text-2xl font-semibold mb-8">Privacy Policy for FastShort</h1>
+        <h1 class="text-2xl font-semibold mb-8">Privacy Policy for MyTeamJob</h1>
 
         <h2 class="text-xl font-semibold mb-4">1. Introduction</h2>
         <p class="mb-4">Brief explanation of the purpose and scope of the privacy policy.</p>
