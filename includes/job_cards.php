@@ -25,7 +25,7 @@ $url = "/job?id=";
             <div class="bg-white shadow-md rounded-md p-4 lg:p-6 h-full">
                 <div class="flex flex-col h-full gap-4">
                     <a class="" href="<?= $url . $post['id'] ?>">
-                        <img src="https://picsum.photos/200/300" alt="post" class="w-full aspect-video">
+                        <img src="https://picsum.photos/200/300" alt="post" class="w-full aspect-video object-cover" width="640" height="460">
                     </a>
                     <h2 class="text-2xl font-semibold">
                         <a href="<?= $url . $post['id'] ?>" class="text-gray-800 hover:underline">
