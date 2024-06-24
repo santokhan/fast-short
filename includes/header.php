@@ -1,3 +1,13 @@
+<?php
+$menuItems = [
+    ['url' => '/', 'label' => 'Home'],
+    ['url' => '/about', 'label' => 'About'],
+    ['url' => '/contact', 'label' => 'Contact'],
+    ['url' => '/privacy-policy', 'label' => 'Privacy Policy'],
+    ['url' => '/terms', 'label' => 'Terms & Conditions']
+];
+?>
+
 <nav class="sticky top-0 z-[2] flex h-16 w-full items-center transition-colors duration-200 bg-white">
     <div class="flex flex-1 items-center justify-between px-4 h-full container w-full mx-auto">
         <div class="flex items-center">
@@ -5,8 +15,11 @@
         </div>
         <div class="">
             <ul class="flex-row gap-2 justify-center hidden lg:flex">
-                <li><a href="/about" class="py-2.5 px-4 rounded-full font-semibold text-secondary-900 hover:underline decoration-2 underline-offset-4"><span class="whitespace-nowrap">About</span></a></li>
-                <li><a href="/contact" class="py-2.5 px-4 rounded-full font-semibold text-secondary-900 hover:underline decoration-2 underline-offset-4"><span class="whitespace-nowrap">Contact</span></a></li>
+                <ul class="flex flex-wrap gap-x-4 sm:gap-x-6 items-center">
+                    <?php foreach ($menuItems as $item) : ?>
+                        <li><a href="<?php echo htmlspecialchars($item['url']); ?>" class="px-2 font-semibold hover:underline decoration-2 underline-offset-4 whitespace-nowrap"><?php echo htmlspecialchars($item['label']); ?></a></li>
+                    <?php endforeach; ?>
+                </ul>
             </ul>
             <div class="flex items-center justify-center lg:hidden">
                 <button type="button" class="text-secondary-900" title="Toggle">
