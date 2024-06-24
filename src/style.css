@@ -2,9 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
     #continueHidden {
         display: none;
+    }
+}
+
+@layer utilities {
+    .text-body h2 {
+        @apply text-2xl font-semibold mb-4;
+    }
+
+    .text-body p {
+        @apply mb-4;
+    }
+
+    .text-body ul {
+        @apply list-disc list-inside space-y-2 mb-6;
     }
 }

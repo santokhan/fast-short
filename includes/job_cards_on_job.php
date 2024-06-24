@@ -19,9 +19,9 @@ $url = "/job?id=";
 ?>
 
 <div class="flex flex-wrap items-stretch gap-6 mt-8">
-    <?php foreach ($job_posts as $post) : ?>
+    <?php foreach (array_slice($job_posts, 3, 2) as $post) : ?>
         <article id="post-<?= $post['id'] ?>" class="w-full md:w-5/12 flex-grow">
-            <div class="bg-white shadow-md rounded-md p-4 lg:p-6 h-full">
+            <div class="bg-white rounded-md p-4 lg:p-6 h-full">
                 <div class="flex flex-col h-full gap-4">
                     <a class="" href="<?= $url . $post['id'] ?>">
                         <img src="<?= $post['src'] ?>" alt="post" class="w-full aspect-video object-cover rounded-lg" width="640" height="460">
