@@ -1,5 +1,5 @@
 <nav class="sticky top-0 z-[2] flex h-16 w-full items-center transition-colors duration-200 bg-white">
-    <div class="flex flex-1 items-center justify-between px-4 h-full max-w-screen-xl w-full mx-auto">
+    <div class="flex flex-1 items-center justify-between px-4 h-full container w-full mx-auto">
         <div class="flex items-center">
             <?php include './src/logo.php'; ?>
         </div>

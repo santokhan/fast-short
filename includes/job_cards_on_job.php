@@ -1,9 +1,19 @@
 <?php
 include './includes/job_cards_data.php';
 include './src/utils/validate_string.php';
-?>
 
-<?php
+$job_id = $_GET['id'];
+
+$index = 3;
+
+foreach ($job_posts as $key => $value) {
+    global $index;
+
+    if ($value['id'] == $job_id) {
+        $index = $key;
+    }
+}
+
 function get_post_data($post = [], $key = '')
 {
     if ($key && is_array($post) && isset($post[$key])) {
@@ -19,7 +29,7 @@ $url = "/job?id=";
 ?>
 
 <div class="flex flex-wrap items-stretch gap-6 mt-8">
-    <?php foreach (array_slice($job_posts, 3, 2) as $post) : ?>
+    <?php foreach (array_slice($job_posts, $index, 2) as $post) : ?>
         <article id="post-<?= $post['id'] ?>" class="w-full md:w-5/12 flex-grow">
             <div class="bg-white rounded-md p-4 lg:p-6 h-full">
                 <div class="flex flex-col h-full gap-4">

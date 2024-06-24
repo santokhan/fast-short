@@ -1,4 +1,4 @@
-<div class="flex justify-center items-center gap-4 mt-6">
+<div class="flex justify-center items-center gap-4">
     <a href="https://www.facebook.com/fast.short.url?mibextid=ZbWKwL" class="text-xl text-gray-900 size-6">
         <svg class="w-full h-full" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M15.4056 11.2493L15.9755 7.63143H12.4648V5.27982C12.4648 4.29056 12.9549 3.32391 14.5222 3.32391H16.1408V0.243075C15.1982 0.0929007 14.2457 0.0116567 13.2911 0C10.4016 0 8.51521 1.73544 8.51521 4.87281V7.63143H5.31226V11.2493H8.51521V20H12.4648V11.2493H15.4056Z" fill="currentColor"></path>
