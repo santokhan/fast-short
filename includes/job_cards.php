@@ -21,14 +21,23 @@ $url = "/job?id=";
 
 <div class="flex flex-wrap items-stretch gap-6 mt-8">
     <?php foreach ($job_posts as $post) : ?>
-        <article id="post-<?= $post['id'] ?>" class="w-full md:w-5/12 lg:w-3/12 flex-grow">
+        <article id="post-<?= $post['id'] ?>" class="w-full md:w-5/12 flex-grow">
             <div class="bg-white shadow-md rounded-md p-4 lg:p-6 h-full">
                 <div class="flex flex-col h-full gap-4">
-                    <h2 class="text-xl font-semibold">
-                        <a href="<?= $url . $post['id'] ?>" class="text-blue-500 hover:underline">
+                    <a class="" href="<?= $url . $post['id'] ?>">
+                        <img src="https://picsum.photos/200/300" alt="post" class="w-full aspect-video">
+                    </a>
+                    <h2 class="text-2xl font-semibold">
+                        <a href="<?= $url . $post['id'] ?>" class="text-gray-800 hover:underline">
                             <?= get_post_data($post, 'title'); ?>
                         </a>
                     </h2>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-sm font-medium text-gray-500 border rounded-full py-1 px-2"># For Sale</span>
+                        <span class="text-sm font-medium text-gray-500 border rounded-full py-1 px-2"># House</span>
+                        <span class="text-sm font-medium text-gray-500 border rounded-full py-1 px-2"># Realton</span>
+                        <span class="text-sm font-medium text-gray-500 border rounded-full py-1 px-2"># Apartments</span>
+                    </div>
                     <p class="h-full"><?= get_post_data($post, 'description'); ?></p>
                     <div class="flex items-center space-x-2 text-gray-500 text-sm">
                         <?php

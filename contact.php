@@ -37,9 +37,8 @@
 
             <div class="bg-white shadow-md rounded-lg px-8 py-6 mb-4">
                 <h2 class="text-xl font-bold text-gray-800 mb-4">Contact Information</h2>
-
                 <p class="text-gray-700 mb-2"><strong>Email:</strong> <a href="mailto:1xshort@gmail.com" class="text-blue-500 hover:underline">1xshort@gmail.com</a></p>
-                <p class="text-gray-700 mb-2"><strong>Phone:</strong> <a href="tel:+8801307230077" class="text-blue-500 hover:underline">+8801307230077</a></p>
+                <!-- <p class="text-gray-700 mb-2"><strong>Phone:</strong> <a href="tel:+8801307230077" class="text-blue-500 hover:underline">+8801307230077</a></p> -->
                 <p class="text-gray-700 mb-2"><strong>Address:</strong> Dhaka, Bangladesh</p>
             </div>
 
