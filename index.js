@@ -2,6 +2,7 @@ import dotenv from 'dotenv'
 import cors from 'cors'
 import express from 'express'
 import router from './src/router/router.js'
+import corsOptions from './src/utils/allowDomain.js'
 
 dotenv.config()
 
