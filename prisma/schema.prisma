@@ -1,0 +1,20 @@
+datasource db {
+    provider = "mongodb"
+    url      = env("DATABASE_URL")
+}
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+model urls {
+    id        String   @id @default(auto()) @map("_id") @db.ObjectId
+    URL       String
+    domain    String
+    hash      String?
+    alias     String?
+    author    String?
+    visited   Boolean? @default(false) // Ads website will request to make it true
+    createdAt DateTime? @default(now())
+    updatedAt DateTime? @default(now())
+}
