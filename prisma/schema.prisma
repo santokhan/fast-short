@@ -8,13 +8,29 @@ generator client {
 }
 
 model urls {
-    id        String   @id @default(auto()) @map("_id") @db.ObjectId
+    id        String    @id @default(auto()) @map("_id") @db.ObjectId
     URL       String
     domain    String
     hash      String?
     alias     String?
     author    String?
-    visited   Boolean? @default(false) // Ads website will request to make it true
-    createdAt DateTime? @default(now())
-    updatedAt DateTime? @default(now())
+    visited   Boolean?  @default(false) // Ads website will request to make it true
+    createdAt DateTime? @default(now()) // Already added without date
+    updatedAt DateTime? @default(now()) // Already added without date
+}
+
+model wallet {
+    id        String   @id @default(auto()) @map("_id") @db.ObjectId
+    author    String   @unique // for upsert author should be unique
+    urlArray  String[]
+    createdAt DateTime @default(now())
+    updatedAt DateTime @default(now())
+}
+
+model withdrawal {
+    id        String   @id @default(auto()) @map("_id") @db.ObjectId
+    author    String   // author is not unique here
+    urlArray  String[]
+    createdAt DateTime @default(now())
+    updatedAt DateTime @default(now())
 }

@@ -15,8 +15,6 @@ async function post({ url = '', domain = '', alias = '', author = '' }) {
                     domain,
                     alias,
                     author,
-                    createdAt: new Date(),
-                    updatedAt: new Date(),
                 }
             })
             return result
