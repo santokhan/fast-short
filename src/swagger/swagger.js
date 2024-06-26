@@ -1,6 +1,6 @@
 import swaggerJSDoc from "swagger-jsdoc";
 
-const options = {
+const specs = swaggerJSDoc({
   swaggerDefinition: {
     openapi: '3.0.0',
     info: {
@@ -9,11 +9,10 @@ const options = {
       description: 'A sample API for learning Swagger with Express'
     },
   },
-  apis: ['./routes/users.js'], // Path to the API routes
-  host: 'localhost:5000',
-  basePath: '/',
-};
-
-const specs = swaggerJSDoc(options);
+  apis: [
+    './src/routes/*.js',
+    './src/router/*.js'
+  ], // Path to the API routes
+});
 
 export default specs;

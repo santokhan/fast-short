@@ -4,13 +4,13 @@ const router = express.Router()
 
 /**
  * @swagger
- * /api/users:
+ * /:
  *   get:
- *     summary: Returns a list of users
+ *     summary: Returns an object include message
  *     description: Optional extended description in Markdown.
  *     responses:
  *       200:
- *         description: A list of users
+ *         description: Message
  *         content:
  *           application/json:
  *             schema:
@@ -23,11 +23,9 @@ const router = express.Router()
  *                   name:
  *                     type: string
  */
-router.get('/api/users', (req, res) => {
-    res.json([
-        { id: 1, name: 'John Doe' },
-        { id: 2, name: 'Jane Smith' }
-    ]);
-});
+router.get('/', (req, res) => {
+    const message = "Welcome to the URL hash server"
+    res.json({ message })
+})
 
 export default router

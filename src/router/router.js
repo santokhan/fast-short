@@ -1,25 +1,86 @@
-import express from 'express'
-import RouterHash from './hash/all.js'
-import RouterWallet from './wallet/all.js'
-import RouterWithdrawal from './withdrawal/all.js'
+import express from 'express';
+import RouterHash from './hash/all.js';
+import RouterWallet from './wallet/all.js';
+import RouterWithdrawal from './withdrawal/all.js';
 
-const router = express.Router()
+const router = express.Router();
 
-router.get('/', (req, res) => {
-    const message = "Welcome to the URL hash server"
-    res.json({ message })
-})
+/**
+ * @swagger
+ * /hash:
+ *   post:
+ *     summary: Create a new hash
+ */
+router.post('/hash', RouterHash.post);
 
-router.post('/hash', RouterHash.post)
-router.get('/hash', RouterHash.get)
-router.patch('/hash', RouterHash.patch)
-router.delete('/hash', RouterHash.delete)
+/**
+ * @swagger
+ * /hash:
+ *   get:
+ *     summary: Retrieve hashes
+ *     parameters:
+ *       - in: query
+ *         name: id
+ *         schema:
+ *           type: string
+ *         description: Hash Id
+ */
+router.get('/hash', RouterHash.get);
 
-router.put('/wallet', RouterWallet.put)
-router.get('/wallet', RouterWallet.get)
-router.patch('/wallet', RouterWallet.patch)
+/**
+ * @swagger
+ * /hash:
+ *   patch:
+ *     summary: Update a hash
+ */
+router.patch('/hash', RouterHash.patch);
 
-router.post('/withdrawal', RouterWithdrawal.post)
-router.get('/withdrawal', RouterWithdrawal.get)
+/**
+ * @swagger
+ * /hash:
+ *   delete:
+ *     summary: Delete a hash
+ */
+router.delete('/hash', RouterHash.delete);
+
+/**
+ * @swagger
+ * /wallet:
+ *   put:
+ *     summary: Update wallet
+ */
+router.put('/wallet', RouterWallet.put);
+
+/**
+ * @swagger
+ * /wallet:
+ *   get:
+ *     summary: Retrieve wallet
+ */
+router.get('/wallet', RouterWallet.get);
+
+/**
+ * @swagger
+ * /wallet:
+ *   patch:
+ *     summary: Patch wallet
+ */
+router.patch('/wallet', RouterWallet.patch);
+
+/**
+ * @swagger
+ * /withdrawal:
+ *   post:
+ *     summary: Create a new withdrawal request
+ */
+router.post('/withdrawal', RouterWithdrawal.post);
+
+/**
+ * @swagger
+ * /withdrawal:
+ *   get:
+ *     summary: Retrieve withdrawal requests
+ */
+router.get('/withdrawal', RouterWithdrawal.get);
 
 export default router;
