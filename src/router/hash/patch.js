@@ -6,7 +6,7 @@ async function update(req, res) {
     const body = req.body
 
     if (id) {
-        if (body) {
+        if (body.author || body.visited || body.url || body.domain) {
             ModelHash.patch({ id, ...body }).then(result => {
                 if (result.visited == true) {
                     if (result.id && result.author) {
@@ -30,11 +30,11 @@ async function update(req, res) {
                 }
             })
         } else {
-            res.json({ message: "Require body" })
+            res.status(400).json({ message: "Require body" })
         }
     } else {
         const message = "Require id"
-        res.json({ message })
+        res.status(400).json({ message })
     }
 }
 

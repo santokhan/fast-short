@@ -5,7 +5,10 @@ import RouterWithdrawal from './withdrawal/all.js'
 
 const router = express.Router()
 
-router.get('/', (req, res) => { res.json("Welcome to the URL hash server") })
+router.get('/', (req, res) => {
+    const message = "Welcome to the URL hash server"
+    res.json({ message })
+})
 
 router.post('/hash', RouterHash.post)
 router.get('/hash', RouterHash.get)
