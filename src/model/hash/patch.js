@@ -13,9 +13,7 @@ async function patch({ id = '', visited = false }) {
                 data
             })
 
-            return {
-                result
-            }
+            return result
         } catch (error) {
             console.error(error)
         } finally {
