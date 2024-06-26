@@ -3,10 +3,18 @@ import prisma from "../../../prisma/prisma.js";
 async function get({ author }) {
     if (author) {
         try {
-            const result = await prisma.wallet.findFirst({
-                where: { author }
-            })
-            return result;
+            if (author === "*") {
+                const result = await prisma.wallet.findMany()
+                return {
+                    count: result.length,
+                    result
+                };
+            } else {
+                const result = await prisma.wallet.findFirst({
+                    where: { author }
+                })
+                return result;
+            }
         } catch (error) {
             console.error(error)
         } finally {

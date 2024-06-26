@@ -1,11 +1,11 @@
 import prisma from "../../../prisma/prisma.js"
 
-async function post({ author, urlId: urlArray }) {
+async function post({ author, urlArray }) {
     if (author && urlArray) {
         try {
-            const result = await prisma.wallet.create({
+            const result = await prisma.withdrawal.create({
                 data: {
-                    urlArray: [urlArray],
+                    urlArray: urlArray,
                     author
                 }
             })
@@ -16,7 +16,7 @@ async function post({ author, urlId: urlArray }) {
             prisma.$disconnect()
         }
     } else {
-        console.log("Require author and urlId")
+        console.log("Require author and urlArray")
     }
 }
 
