@@ -1,7 +1,7 @@
 import ModelHash from '../../model/hash/all.js'
 import ModelWallet from '../../model/wallet/all.js'
 
-async function update(req, res) {
+async function patch(req, res) {
     const { id } = req.query
     const body = req.body
 
@@ -38,4 +38,4 @@ async function update(req, res) {
     }
 }
 
-export default update
+export default patch

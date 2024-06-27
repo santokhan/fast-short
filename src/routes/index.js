@@ -14,14 +14,7 @@ const router = express.Router()
  *         content:
  *           application/json:
  *             schema:
- *               type: array
- *               items:
- *                 type: object
- *                 properties:
- *                   id:
- *                     type: integer
- *                   name:
- *                     type: string
+ *               type: object
  */
 router.get('/', (req, res) => {
     const message = "Welcome to the URL hash server"

@@ -5,23 +5,15 @@ import RouterWithdrawal from './withdrawal/all.js';
 
 const router = express.Router();
 
-
 /**
  * @swagger
  * /hash:
  *   post:
  *     tags: 
  *       - hash
- *     summary: Retrieve hashes
- *     parameters:
- *       - in: query
- *         name: id
- *         schema:
- *           type: string
- *         description: Hash Id
  *     responses:
  *       200:
- *         description: Message
+ *         description: Success
  *         content:
  *           application/json:
  *             schema:
@@ -35,16 +27,22 @@ router.post('/hash', RouterHash.post);
  *   get:
  *     tags:
  *       - hash
- *     summary: Retrieve hashes
  *     parameters:
  *       - in: query
  *         name: id
- *         schema:
- *           type: string
- *         description: Hash Id
+ *       - in: query
+ *         name: hash
+ *       - in: query
+ *         name: alias
+ *       - in: query
+ *         name: author
+ *       - in: query
+ *         name: visited
+ *       - in: query
+ *         name: url
  *     responses:
  *       200:
- *         description: Message
+ *         description: Success
  *         content:
  *           application/json:
  *             schema:
@@ -58,16 +56,12 @@ router.get('/hash', RouterHash.get);
  *   patch:
  *     tags:
  *       - hash
- *     summary: Retrieve hashes
  *     parameters:
  *       - in: query
  *         name: id
- *         schema:
- *           type: string
- *         description: Hash Id
  *     responses:
  *       200:
- *         description: Message
+ *         description: Success
  *         content:
  *           application/json:
  *             schema:
@@ -81,16 +75,12 @@ router.patch('/hash', RouterHash.patch);
  *   delete:
  *     tags:
  *       - hash
- *     summary: Retrieve hashes
  *     parameters:
  *       - in: query
  *         name: id
- *         schema:
- *           type: string
- *         description: Hash Id
  *     responses:
  *       200:
- *         description: Message
+ *         description: Success
  *         content:
  *           application/json:
  *             schema:
@@ -101,19 +91,15 @@ router.delete('/hash', RouterHash.delete);
 /**
  * @swagger
  * /wallet:
+ *   put:
  *     tags:
  *       - wallet
- *   put:
- *     summary: Retrieve hashes
  *     parameters:
  *       - in: query
  *         name: id
- *         schema:
- *           type: string
- *         description: Hash Id
  *     responses:
  *       200:
- *         description: Message
+ *         description: Success
  *         content:
  *           application/json:
  *             schema:
@@ -127,16 +113,12 @@ router.put('/wallet', RouterWallet.put);
  *     tags:
  *       - wallet
  *   get:
- *     summary: Retrieve hashes
  *     parameters:
  *       - in: query
  *         name: id
- *         schema:
- *           type: string
- *         description: Hash Id
  *     responses:
  *       200:
- *         description: Message
+ *         description: Success
  *         content:
  *           application/json:
  *             schema:
@@ -150,7 +132,6 @@ router.get('/wallet', RouterWallet.get);
  *   patch:
  *     tags:
  *       - wallet
- *     summary: Retrieve hashes
  *     parameters:
  *       - in: query
  *         name: id
@@ -159,7 +140,7 @@ router.get('/wallet', RouterWallet.get);
  *         description: Hash Id
  *     responses:
  *       200:
- *         description: Message
+ *         description: Success
  *         content:
  *           application/json:
  *             schema:
@@ -173,16 +154,9 @@ router.patch('/wallet', RouterWallet.patch);
  *   post:
  *     tags:
  *       - withdrawal
- *     summary: Retrieve hashes
- *     parameters:
- *       - in: query
- *         name: id
- *         schema:
- *           type: string
- *         description: Hash Id
  *     responses:
  *       200:
- *         description: Message
+ *         description: Success
  *         content:
  *           application/json:
  *             schema:
@@ -196,16 +170,12 @@ router.post('/withdrawal', RouterWithdrawal.post);
  *   get:
  *     tags:
  *       - withdrawal
- *     summary: Retrieve hashes
  *     parameters:
  *       - in: query
  *         name: id
- *         schema:
- *           type: string
- *         description: Hash Id
  *     responses:
  *       200:
- *         description: Message
+ *         description: Success
  *         content:
  *           application/json:
  *             schema:
