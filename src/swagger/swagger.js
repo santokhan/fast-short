@@ -4,9 +4,9 @@ const specs = swaggerJSDoc({
   swaggerDefinition: {
     openapi: '3.0.0',
     info: {
-      title: 'Express API with Swagger',
+      title: 'FastShort Express API with Swagger',
       version: '1.0.0',
-      description: 'A sample API for learning Swagger with Express'
+      description: 'A simple Express API for FastShort URL Shortener',
     },
   },
   apis: [

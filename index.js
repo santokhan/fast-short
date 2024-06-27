@@ -6,6 +6,7 @@ import index from './src/routes/index.js'
 import corsOptions from './src/utils/allowDomain.js'
 import swaggerUi from 'swagger-ui-express'
 import specs from './src/swagger/swagger.js'
+import swaggerDocument from './src/swagger/read-file.js'
 
 dotenv.config()
 

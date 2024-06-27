@@ -5,17 +5,127 @@ import RouterWithdrawal from './withdrawal/all.js';
 
 const router = express.Router();
 
+
 /**
  * @swagger
  * /hash:
  *   post:
- *     summary: Create a new hash
+ *     tags: 
+ *       - hash
+ *     summary: Retrieve hashes
+ *     parameters:
+ *       - in: query
+ *         name: id
+ *         schema:
+ *           type: string
+ *         description: Hash Id
+ *     responses:
+ *       200:
+ *         description: Message
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
  */
 router.post('/hash', RouterHash.post);
 
 /**
  * @swagger
  * /hash:
+ *   get:
+ *     tags:
+ *       - hash
+ *     summary: Retrieve hashes
+ *     parameters:
+ *       - in: query
+ *         name: id
+ *         schema:
+ *           type: string
+ *         description: Hash Id
+ *     responses:
+ *       200:
+ *         description: Message
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ */
+router.get('/hash', RouterHash.get);
+
+/**
+ * @swagger
+ * /hash:
+ *   patch:
+ *     tags:
+ *       - hash
+ *     summary: Retrieve hashes
+ *     parameters:
+ *       - in: query
+ *         name: id
+ *         schema:
+ *           type: string
+ *         description: Hash Id
+ *     responses:
+ *       200:
+ *         description: Message
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ */
+router.patch('/hash', RouterHash.patch);
+
+/**
+ * @swagger
+ * /hash:
+ *   delete:
+ *     tags:
+ *       - hash
+ *     summary: Retrieve hashes
+ *     parameters:
+ *       - in: query
+ *         name: id
+ *         schema:
+ *           type: string
+ *         description: Hash Id
+ *     responses:
+ *       200:
+ *         description: Message
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ */
+router.delete('/hash', RouterHash.delete);
+
+/**
+ * @swagger
+ * /wallet:
+ *     tags:
+ *       - wallet
+ *   put:
+ *     summary: Retrieve hashes
+ *     parameters:
+ *       - in: query
+ *         name: id
+ *         schema:
+ *           type: string
+ *         description: Hash Id
+ *     responses:
+ *       200:
+ *         description: Message
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ */
+router.put('/wallet', RouterWallet.put);
+
+/**
+ * @swagger
+ * /wallet:
+ *     tags:
+ *       - wallet
  *   get:
  *     summary: Retrieve hashes
  *     parameters:
@@ -24,38 +134,13 @@ router.post('/hash', RouterHash.post);
  *         schema:
  *           type: string
  *         description: Hash Id
- */
-router.get('/hash', RouterHash.get);
-
-/**
- * @swagger
- * /hash:
- *   patch:
- *     summary: Update a hash
- */
-router.patch('/hash', RouterHash.patch);
-
-/**
- * @swagger
- * /hash:
- *   delete:
- *     summary: Delete a hash
- */
-router.delete('/hash', RouterHash.delete);
-
-/**
- * @swagger
- * /wallet:
- *   put:
- *     summary: Update wallet
- */
-router.put('/wallet', RouterWallet.put);
-
-/**
- * @swagger
- * /wallet:
- *   get:
- *     summary: Retrieve wallet
+ *     responses:
+ *       200:
+ *         description: Message
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
  */
 router.get('/wallet', RouterWallet.get);
 
@@ -63,7 +148,22 @@ router.get('/wallet', RouterWallet.get);
  * @swagger
  * /wallet:
  *   patch:
- *     summary: Patch wallet
+ *     tags:
+ *       - wallet
+ *     summary: Retrieve hashes
+ *     parameters:
+ *       - in: query
+ *         name: id
+ *         schema:
+ *           type: string
+ *         description: Hash Id
+ *     responses:
+ *       200:
+ *         description: Message
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
  */
 router.patch('/wallet', RouterWallet.patch);
 
@@ -71,7 +171,22 @@ router.patch('/wallet', RouterWallet.patch);
  * @swagger
  * /withdrawal:
  *   post:
- *     summary: Create a new withdrawal request
+ *     tags:
+ *       - withdrawal
+ *     summary: Retrieve hashes
+ *     parameters:
+ *       - in: query
+ *         name: id
+ *         schema:
+ *           type: string
+ *         description: Hash Id
+ *     responses:
+ *       200:
+ *         description: Message
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
  */
 router.post('/withdrawal', RouterWithdrawal.post);
 
@@ -79,7 +194,22 @@ router.post('/withdrawal', RouterWithdrawal.post);
  * @swagger
  * /withdrawal:
  *   get:
- *     summary: Retrieve withdrawal requests
+ *     tags:
+ *       - withdrawal
+ *     summary: Retrieve hashes
+ *     parameters:
+ *       - in: query
+ *         name: id
+ *         schema:
+ *           type: string
+ *         description: Hash Id
+ *     responses:
+ *       200:
+ *         description: Message
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
  */
 router.get('/withdrawal', RouterWithdrawal.get);
 
