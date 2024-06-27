@@ -13,7 +13,7 @@ import FormTitle from '@/components/form/FormTitle'
 import { useSession } from 'next-auth/react'
 import CopyButton from '../button/CopyButton'
 import RedirectButton from '../RedirectButton'
-import { adsURL } from './shorter-form/domains'
+import domains, { adsURL } from './shorter-form/domains'
 
 const ShortenURL = ({ res = '' }) => {
     if (res) {
@@ -38,7 +38,7 @@ const ShortenURL = ({ res = '' }) => {
 const UrlShorterForm = () => {
     const [generated, setGenerated] = useState('')
     const [url, setUrl] = useState('')
-    const [domain, setDomain] = useState('fastshort.xyz')
+    const [domain, setDomain] = useState(domains[0].value)
     const [alias, setAlias] = useState('')
     const [error, setError] = useState({})
     const [loading, setLoading] = useState(false)
