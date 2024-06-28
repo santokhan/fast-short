@@ -1,6 +1,6 @@
 <main class="min-h-screen">
     <section class="max-w-4xl px-4 mx-auto py-12 text-body">
-        <h1 class="text-3xl font-bold text-gray-800 mb-6 text-center">Terms of Service for MyTeamJob</h1>
+        <h1 class="text-3xl font-bold text-gray-800 mb-6 text-center">Terms of Service for FastShort</h1>
 
         <h2 class="">1. Introduction</h2>
         <p class="">Brief explanation of the purpose and scope of the terms of service.</p>
@@ -13,10 +13,10 @@
 
         <p class="mt-8">By accessing or using our service, you agree to be bound by these terms. If you have any questions about these Terms, please contact us.</p>
 
-        <h1>Terms of Service for MyTeamJob</h1>
+        <h1>Terms of Service for FastShort</h1>
 
         <h2>1. Introduction</h2>
-        <p>Welcome to MyTeamJob! These Terms of Service ("Terms") govern your access to and use of the MyTeamJob website, mobile application, and any other related services (collectively, the "Service"). The Service allows users to connect with potential employers and employees for job opportunities.</p>
+        <p>Welcome to FastShort! These Terms of Service ("Terms") govern your access to and use of the FastShort website, mobile application, and any other related services (collectively, the "Service"). The Service allows users to connect with potential employers and employees for job opportunities.</p>
 
         <p>By accessing or using the Service, you agree to be bound by these Terms, including any additional terms and policies incorporated by reference herein (collectively, the "Agreement"). If you do not agree to all of the terms of the Agreement, you are not authorized to use the Service.</p>
 

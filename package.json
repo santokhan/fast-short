@@ -1,5 +1,5 @@
 {
-  "name": "myteamjob-php",
+  "name": "fastshort-php",
   "version": "1.0.0",
   "description": "For a small PHP project with 5-6 pages, using Composer is not strictly necessary, but it can still be beneficial. Composer is a dependency manager for PHP that helps manage libraries and dependencies, and it can simplify autoloading your classes.",
   "main": "index.js",

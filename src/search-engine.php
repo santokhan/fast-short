@@ -2,8 +2,8 @@
     {
         "@context": "http://schema.org",
         "@type": "WebSite",
-        "url": "https://myteamjob.com/",
-        "name": "MyTeamJob,
+        "url": "https://fastshort.xyz/",
+        "name": "FastShort,
         "description": "Job posting website",
         "publisher": {
             "@type": "1xshort",

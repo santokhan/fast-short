@@ -1,6 +1,6 @@
 <main class="min-h-screen">
     <section class="max-w-4xl px-4 mx-auto py-12 text-body">
-        <h1 class="text-3xl font-bold text-gray-800 mb-6 text-center">Privacy Policy for MyTeamJob.com</h1>
+        <h1 class="text-3xl font-bold text-gray-800 mb-6 text-center">Privacy Policy for FastShort.com</h1>
 
         <h2 class="">1. Information We Collect</h2>
         <p class="">We may collect personal information directly from you when you visit our Site, register an account, post a job listing, apply for a job, subscribe to our newsletter, or otherwise interact with our services. This information may include:</p>
