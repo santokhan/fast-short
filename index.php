@@ -6,23 +6,15 @@ $full_path = $_SERVER['REQUEST_URI']; // /?hash=abc123
 $path_array = parse_url($full_path); // Array(2) { ["path"]=> string(1) "/" ["query"]=> string(11) "hash=abc123" }
 $path = $path_array['path'];
 
-switch ($path) {
-    case '/robot.txt':
-        echo file_get_contents('/robot.txt');
-        break;
+if ($path == '/sitemap') {
+    header('Content-Type: application/xml');
+    echo file_get_contents('./sitemap.xml');
+    exit;
+}
 
-    case '/sitemap':
-        header('Content-Type: application/xml');
-        echo file_get_contents('./sitemap.xml');
-        exit;
-
-    case '/verify':
-        include './src/recaptcha/verify.php';
-        break;
-
-    default:
-        # code...
-        break;
+if ($path == '/verify') {
+    include './src/recaptcha/verify.php';
+    exit;
 }
 ?>
 
@@ -30,16 +22,15 @@ switch ($path) {
 <html lang="en">
 
 <head>
-    <?php include './includes/head.php' ?>
+    <?php
+    include './includes/head.php';
+    ?>
 </head>
 
 <body class="bg-gray-50">
-    <?php
-     include './includes/header.php';
-     include './src/google/gtm.php';
-     ?>
+    <?php include './includes/header.php'; ?>
 
-    <div class="!min-h-screen">
+    <div class="!min-h-[60vh]">
         <?php
         switch ($path) {
             case '/':
