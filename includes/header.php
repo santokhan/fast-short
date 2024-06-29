@@ -1,5 +1,5 @@
 <?php
-include '../src/utils/checkActive.php';
+include './src/utils/checkActive.php';
 
 $menuItems = [
     ['url' => '/', 'label' => 'Home'],
