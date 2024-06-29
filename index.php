@@ -6,19 +6,15 @@ $full_path = $_SERVER['REQUEST_URI']; // /?hash=abc123
 $path_array = parse_url($full_path); // Array(2) { ["path"]=> string(1) "/" ["query"]=> string(11) "hash=abc123" }
 $path = $path_array['path'];
 
-switch ($path) {
-    case '/sitemap':
-        header('Content-Type: application/xml');
-        echo file_get_contents('./sitemap.xml');
-        exit;
+if ($path == '/sitemap') {
+    header('Content-Type: application/xml');
+    echo file_get_contents('./sitemap.xml');
+    exit;
+}
 
-    case '/verify':
-        include './src/recaptcha/verify.php';
-        exit;
-
-    default:
-        # code...
-        exit;
+if ($path == '/verify') {
+    include './src/recaptcha/verify.php';
+    exit;
 }
 ?>
 
