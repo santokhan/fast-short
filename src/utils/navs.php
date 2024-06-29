@@ -10,7 +10,7 @@ $resources_navs = [
     ['url' => '/faq', 'label' => 'FAQ'],
     ['url' => '/gallery', 'label' => 'Gallery'],
     ['url' => '/sitemap', 'label' => 'Sitemap'],
-    ['url' => '/events', 'label' => 'Events Calender'],
+    ['url' => '/events-calender', 'label' => 'Events Calender'],
 ];
 
 $guide = [

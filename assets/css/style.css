@@ -754,6 +754,22 @@ video {
   min-height: 100vh;
 }
 
+.\!min-h-\[50vh\] {
+  min-height: 50vh !important;
+}
+
+.\!min-h-\[64vh\] {
+  min-height: 64vh !important;
+}
+
+.\!min-h-\[6vh\] {
+  min-height: 6vh !important;
+}
+
+.\!min-h-\[60vh\] {
+  min-height: 60vh !important;
+}
+
 .w-0 {
   width: 0px;
 }

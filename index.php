@@ -38,7 +38,7 @@ switch ($path) {
 <body class="bg-gray-50">
     <?php include './includes/header.php'; ?>
 
-    <div class="!min-h-screen">
+    <div class="!min-h-[60vh]">
         <?php
         switch ($path) {
             case '/':

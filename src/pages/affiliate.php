@@ -1,4 +1,4 @@
-<div class="max-w-4xl mx-auto mt-4">
+<div class="max-w-4xl mx-auto py-12 lg:py-16">
     <div class="bg-white p-6 rounded-lg shadow-md">
         <h1 class="text-3xl font-semibold mb-4">Join Our Affiliate Program</h1>
         <p class="mb-4">Welcome to our affiliate program! Earn commissions by promoting our products/services.</p>

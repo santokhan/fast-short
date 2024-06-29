@@ -1,4 +1,4 @@
-<div class="container mx-auto mt-8 flex-grow">
+<div class="max-w-4xl mx-auto py-12 lg:py-16 flex-grow">
     <h1 class="text-4xl font-bold text-center mb-4">Welcome to MyTeamJob.com</h1>
     <p class="text-lg text-center text-gray-700">Your ultimate solution for team management.</p>
 
