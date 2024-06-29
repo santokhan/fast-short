@@ -54,6 +54,9 @@ switch ($path) {
             case '/generating-link':
                 include 'generating-link.php';
                 break;
+            case '/gallery':
+                include './src/pages/gallery.php';
+                break;
             case '/job':
                 include 'job.php';
                 break;
