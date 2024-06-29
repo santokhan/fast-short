@@ -6,19 +6,23 @@ $full_path = $_SERVER['REQUEST_URI']; // /?hash=abc123
 $path_array = parse_url($full_path); // Array(2) { ["path"]=> string(1) "/" ["query"]=> string(11) "hash=abc123" }
 $path = $path_array['path'];
 
-if ($path == '/robot.txt') {
-    echo file_get_contents('/robot.txt');
-    exit;
-}
+switch ($path) {
+    case '/robot.txt':
+        echo file_get_contents('/robot.txt');
+        break;
 
-if ($path == '/sitemap.xml') {
-    echo file_get_contents('/sitemap.xml');
-    exit;
-}
+    case '/sitemap':
+        header('Content-Type: application/xml');
+        echo file_get_contents('./sitemap.xml');
+        exit;
 
-if ($path == '/verify') {
-    include './src/recaptcha/verify.php';
-    exit;
+    case '/verify':
+        include './src/recaptcha/verify.php';
+        break;
+
+    default:
+        # code...
+        break;
 }
 ?>
 
@@ -33,7 +37,7 @@ if ($path == '/verify') {
 
 <body class="bg-gray-50">
     <?php include './includes/header.php'; ?>
-    
+
     <div class="!min-h-screen">
         <?php
         switch ($path) {
@@ -43,11 +47,26 @@ if ($path == '/verify') {
             case '/about':
                 include 'about.php';
                 break;
+            case '/affiliate':
+                include './src/pages/affiliate.php';
+                break;
+            case '/faq':
+                include './src/pages/faq.php';
+                break;
             case '/contact':
                 include 'contact.php';
                 break;
+            case '/events-calender':
+                include './src/pages/events-calender.php';
+                break;
             case '/generating-link':
                 include 'generating-link.php';
+                break;
+            case '/gallery':
+                include './src/pages/gallery.php';
+                break;
+            case '/guide':
+                include './src/pages/guide.php';
                 break;
             case '/job':
                 include 'job.php';
