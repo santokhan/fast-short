@@ -34,7 +34,10 @@ switch ($path) {
 </head>
 
 <body class="bg-gray-50">
-    <?php include './includes/header.php'; ?>
+    <?php
+     include './includes/header.php';
+     include './src/google/gtm.php';
+     ?>
 
     <div class="!min-h-screen">
         <?php
