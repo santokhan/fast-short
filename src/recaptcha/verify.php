@@ -2,7 +2,7 @@
 // Ensure POST request
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Your secret key from Google reCAPTCHA
-    $secret = "6LeBhgAqAAAAAFRSNYrF7kmEZRFLyiALcvc1bk4C";
+    $secret = "6LcWE_gpAAAAAOML3Svb_wp4eP5MhSylLFGS6M16";
 
     // Verify the reCAPTCHA response
     $response = $_POST['g-recaptcha-response'];
