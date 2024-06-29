@@ -1,6 +1,5 @@
 <?php
 include './src/utils/navs.php';
-include './src/utils/checkActive.php';
 ?>
 
 <footer class="bg-white">
