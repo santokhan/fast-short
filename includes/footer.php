@@ -28,6 +28,14 @@ include './src/utils/navs.php';
                     <?php endforeach; ?>
                 </div>
             </ul>
+            <ul class="basis-80 flex-grow flex-shrink-0">
+                <h5 class="text-lg mb-4 font-bold">Guideline</h5>
+                <div class="flex flex-col gap-2 items-start">
+                    <?php foreach ($guide as $item) : ?>
+                        <a href="<?php echo htmlspecialchars($item['url']); ?>" class="block hover:underline"><?php echo htmlspecialchars($item['label']); ?></a>
+                    <?php endforeach; ?>
+                </div>
+            </ul>
         </div>
     </div>
     <div class="container mx-auto p-4 sm:px-6">

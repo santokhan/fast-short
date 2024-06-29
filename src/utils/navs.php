@@ -12,3 +12,8 @@ $resources_navs = [
     ['url' => '/sitemap', 'label' => 'Sitemap'],
     ['url' => '/events', 'label' => 'Events Calender'],
 ];
+
+$guide = [
+    ['url' => '/affiliate', 'label' => 'Affiliate'],
+    ['url' => '/guide', 'label' => 'Guide'],
+];
