@@ -19,8 +19,18 @@
 
 <link rel="stylesheet" href="./assets/css/style.css">
 
-<!-- Google Tag Manager -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZEK8CXQ2Q"></script>
 <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7ZEK8CXQ2Q');
+</script>
+
+<!-- Google Tag Manager -->
+<!-- <script>
      (function(w, d, s, l, i) {
           w[l] = w[l] || [];
           w[l].push({
@@ -35,5 +45,5 @@
                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
           f.parentNode.insertBefore(j, f);
      })(window, document, 'script', 'dataLayer', 'GTM-M75DB6T8');
-</script>
+</script> -->
 <!-- End Google Tag Manager -->
