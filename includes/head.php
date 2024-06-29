@@ -15,7 +15,7 @@
 <meta property="og:description" content="Explore thousands of job opportunities on FastShort. Search for jobs, browse job listings, and apply online.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://fastshort.xyz">
-<meta property="og:image" content="/assets/images/og-image.png">
+<meta property="og:image" content="/assets/images/og-image.webp">
 
 <link rel="stylesheet" href="./assets/css/style.css">
 
