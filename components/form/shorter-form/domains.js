@@ -1,9 +1,5 @@
 const domains = [
     {
-        name: 'post.myteamjob.com',
-        value: 'post.myteamjob.com'
-    },
-    {
         name: 'myteamjob.com',
         value: 'myteamjob.com'
     },
@@ -13,7 +9,7 @@ const domains = [
     }
 ]
 
-const adsURL = ['post.myteamjob.com', 'myteamjob.com', 'fastshort.xyz']
+const adsURL = ['myteamjob.com', 'fastshort.xyz']
 
 export default domains
 
