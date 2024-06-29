@@ -14,17 +14,17 @@ include './src/utils/navs.php';
 
             <ul class="basis-80 flex-grow flex-shrink-0">
                 <h5 class="text-lg mb-4 font-bold">Resources</h5>
-                <div class="space-y-2">
+                <div class="">
                     <?php foreach ($menuItems as $item) : ?>
-                        <li><a href="<?php echo htmlspecialchars($item['url']); ?>" class="hover:underline"><?php echo htmlspecialchars($item['label']); ?></a></li>
+                        <a href="<?php echo htmlspecialchars($item['url']); ?>" class="py-2 hover:underline"><?php echo htmlspecialchars($item['label']); ?></a>
                     <?php endforeach; ?>
                 </div>
             </ul>
             <ul class="basis-80 flex-grow flex-shrink-0">
                 <h5 class="text-lg mb-4 font-bold">Others</h5>
-                <div class="space-y-2">
+                <div class="">
                     <?php foreach ($resources_navs as $item) : ?>
-                        <li><a href="<?php echo htmlspecialchars($item['url']); ?>" class="hover:underline"><?php echo htmlspecialchars($item['label']); ?></a></li>
+                        <a href="<?php echo htmlspecialchars($item['url']); ?>" class="py-2 hover:underline"><?php echo htmlspecialchars($item['label']); ?></a>
                     <?php endforeach; ?>
                 </div>
             </ul>
