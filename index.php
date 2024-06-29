@@ -66,6 +66,9 @@ switch ($path) {
             case '/gallery':
                 include './src/pages/gallery.php';
                 break;
+            case '/guide':
+                include './src/pages/guide.php';
+                break;
             case '/job':
                 include 'job.php';
                 break;
