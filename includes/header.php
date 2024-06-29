@@ -1,4 +1,6 @@
 <?php
+include '../src/utils/checkActive.php';
+
 $menuItems = [
     ['url' => '/', 'label' => 'Home'],
     ['url' => '/about', 'label' => 'About'],
@@ -17,7 +19,7 @@ $menuItems = [
             <ul class="flex-row gap-2 justify-center hidden lg:flex">
                 <ul class="flex flex-wrap gap-x-4 sm:gap-x-6 items-center">
                     <?php foreach ($menuItems as $item) : ?>
-                        <li><a href="<?php echo htmlspecialchars($item['url']); ?>" class="px-2 font-semibold hover:underline decoration-2 underline-offset-4 whitespace-nowrap"><?php echo htmlspecialchars($item['label']); ?></a></li>
+                        <li><a href="<?php echo htmlspecialchars($item['url']); ?>" class="px-2 font-semibold hover:underline decoration-2 underline-offset-4 whitespace-nowrap <?= checkActive($item['url']) ? 'underline' : '' ?>"><?php echo htmlspecialchars($item['label']); ?></a></li>
                     <?php endforeach; ?>
                 </ul>
             </ul>

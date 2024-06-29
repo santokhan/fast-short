@@ -1,5 +1,6 @@
 <?php
 include './src/utils/navs.php';
+include './src/utils/checkActive.php';
 ?>
 
 <footer class="bg-white">
@@ -16,7 +17,7 @@ include './src/utils/navs.php';
                 <h5 class="text-lg mb-4 font-bold">Resources</h5>
                 <div class="flex flex-col gap-2 items-start">
                     <?php foreach ($menuItems as $item) : ?>
-                        <a href="<?php echo htmlspecialchars($item['url']); ?>" class="block hover:underline"><?php echo htmlspecialchars($item['label']); ?></a>
+                        <a href="<?php echo htmlspecialchars($item['url']); ?>" class="block hover:underline <?= checkActive($item['url']) ? 'underline' : '' ?>"><?php echo htmlspecialchars($item['label']); ?></a>
                     <?php endforeach; ?>
                 </div>
             </ul>
@@ -24,7 +25,7 @@ include './src/utils/navs.php';
                 <h5 class="text-lg mb-4 font-bold">Others</h5>
                 <div class="flex flex-col gap-2 items-start">
                     <?php foreach ($resources_navs as $item) : ?>
-                        <a href="<?php echo htmlspecialchars($item['url']); ?>" class="block hover:underline"><?php echo htmlspecialchars($item['label']); ?></a>
+                        <a href="<?php echo htmlspecialchars($item['url']); ?>" class="block hover:underline <?= checkActive($item['url']) ? 'underline' : '' ?>"><?php echo htmlspecialchars($item['label']); ?></a>
                     <?php endforeach; ?>
                 </div>
             </ul>
@@ -32,7 +33,7 @@ include './src/utils/navs.php';
                 <h5 class="text-lg mb-4 font-bold">Guideline</h5>
                 <div class="flex flex-col gap-2 items-start">
                     <?php foreach ($guide as $item) : ?>
-                        <a href="<?php echo htmlspecialchars($item['url']); ?>" class="block hover:underline"><?php echo htmlspecialchars($item['label']); ?></a>
+                        <a href="<?php echo htmlspecialchars($item['url']); ?>" class="block hover:underline <?= checkActive($item['url']) ? 'underline' : '' ?>"><?php echo htmlspecialchars($item['label']); ?></a>
                     <?php endforeach; ?>
                 </div>
             </ul>
