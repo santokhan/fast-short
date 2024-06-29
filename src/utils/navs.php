@@ -7,7 +7,8 @@ $menuItems = [
 ];
 
 $resources_navs = [
-    ['url' => '/sitemap', 'label' => 'Sitemap'],
-    ['url' => '/gallery', 'label' => 'Gallery'],
     ['url' => '/faq', 'label' => 'FAQ'],
+    ['url' => '/gallery', 'label' => 'Gallery'],
+    ['url' => '/sitemap', 'label' => 'Sitemap'],
+    ['url' => '/events', 'label' => 'Events Calender'],
 ];

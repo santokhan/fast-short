@@ -6,7 +6,10 @@ include './src/utils/navs.php';
     <div class="container mx-auto px-4 sm:px-6 py-12">
         <div class="w-full flex flex-wrap md:items-start gap-8">
             <div class="basis-80 flex-grow flex-shrink-0">
-                <?php include './src/logo.php'; ?>
+                <div class=""><?php include './src/logo.php'; ?></div>
+                <div class="mt-8">
+                    <?php include './src/components/social.php'; ?>
+                </div>
             </div>
 
             <ul class="basis-80 flex-grow flex-shrink-0">
@@ -28,9 +31,6 @@ include './src/utils/navs.php';
         </div>
     </div>
     <div class="container mx-auto p-4 sm:px-6">
-        <div class="w-full md:flex md:items-center md:justify-between gap-4">
-            <p class="sm:text-center">© 2023 Santo. All Rights Reserved.</p>
-            <?php include './src/components/social.php'; ?>
-        </div>
+        <p class="text-center">© 2023 Santo. All Rights Reserved.</p>
     </div>
 </footer>

@@ -4,7 +4,7 @@
     <h1 class="text-3xl font-bold mb-8 text-center px-4">Frequently Asked Questions</h1>
 
     <div class="">
-        <details class="bg-white py-3 px-6">
+        <details class="bg-white py-3 px-6" open>
             <summary class="w-full focus:outline-none transition duration-150 ease-in-out">
                 <span class="text-lg text-gray-900">What is MyTeamJob?</span>
             </summary>

@@ -51,6 +51,9 @@ switch ($path) {
             case '/contact':
                 include 'contact.php';
                 break;
+            case '/events-calender':
+                include './src/pages/events-calender.php';
+                break;
             case '/generating-link':
                 include 'generating-link.php';
                 break;
