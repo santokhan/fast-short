@@ -48,6 +48,9 @@ switch ($path) {
             case '/about':
                 include 'about.php';
                 break;
+            case '/affiliate':
+                include './src/pages/affiliate.php';
+                break;
             case '/faq':
                 include './src/pages/faq.php';
                 break;
