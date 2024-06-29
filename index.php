@@ -7,10 +7,6 @@ $path_array = parse_url($full_path); // Array(2) { ["path"]=> string(1) "/" ["qu
 $path = $path_array['path'];
 
 switch ($path) {
-    case '/robot.txt':
-        echo file_get_contents('/robot.txt');
-        break;
-
     case '/sitemap':
         header('Content-Type: application/xml');
         echo file_get_contents('./sitemap.xml');
@@ -18,11 +14,11 @@ switch ($path) {
 
     case '/verify':
         include './src/recaptcha/verify.php';
-        break;
+        exit;
 
     default:
         # code...
-        break;
+        exit;
 }
 ?>
 
