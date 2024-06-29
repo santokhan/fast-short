@@ -1,4 +1,4 @@
-<div class="min-h-[calc(100svh_-_4rem)] flex items-center justify-center bg-cover bg-no-repeat bg-bottom" style="background-image: url(/assets/images/bg-hero.jpg);">
+<div class="min-h-[calc(100svh_-_4rem)] flex items-center justify-center bg-cover bg-no-repeat bg-bottom" style="background-image: url(/assets/images/bg-hero.webp);">
     <div class="max-w-screen-xl mx-auto px-4 text-center">
         <h1 class="text-4xl md:text-6xl font-bold text-gray-900 leading-tight mb-4">Find Your Dream Job</h1>
         <p class="text-lg md:text-xl text-gray-700 mb-8">Browse thousands of job postings across various industries.</p>
