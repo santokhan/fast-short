@@ -112,12 +112,22 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://myteamjob.com/events</loc>
+    <loc>https://myteamjob.com/events-calender</loc>
     <lastmod>2024-06-29T07:54:31+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://myteamjob.com/get-link</loc>
+    <lastmod>2024-06-29T07:54:31+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://myteamjob.com/affiliate</loc>
+    <lastmod>2024-06-29T07:54:31+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://myteamjob.com/guide</loc>
     <lastmod>2024-06-29T07:54:31+00:00</lastmod>
     <priority>0.64</priority>
   </url>
