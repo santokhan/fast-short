@@ -7,7 +7,7 @@ const Footer = () => {
                 <div className='max-w-screen-xl mx-auto p-4 sm:px-6'>
                     <div className='w-full md:flex md:items-center md:justify-between'>
                         <span className='sm:text-center'>
-                            © 2023
+                            © 2023{" "}
                             <a href='https://github.com/santokhan/' className='hover:underline'>
                                 Santo
                             </a>
