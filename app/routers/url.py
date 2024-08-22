@@ -77,7 +77,7 @@ async def get_urls(
 
 
 @router.get("/urls/unauthorized/", tags=["url"])
-async def get_urls(
+async def get_urls_unauthorized(
     skip: int = Query(0, alias="skip", ge=0),
     limit: int = Query(10, alias="limit", ge=1, le=100),
 ):
@@ -147,6 +147,7 @@ async def visited(body: UpdateUrlModel = Body(...)):
 
     updated_result = await collection.update_one(filters, update_visited)
     if updated_result.modified_count > 0:
+        # insert to wallet after visit
         await collection_wallet.insert_one(
             {
                 "author": author,
@@ -156,6 +157,25 @@ async def visited(body: UpdateUrlModel = Body(...)):
             }
         )
         return await get_single_url(filters)
+
+
+@router.patch("/url/{id}", tags=["url"])
+async def update(id: str, body: UpdateUrlModel = Body(...)):
+    filters = filter_dictionary({"_id": ObjectId(id)})
+
+    data_to_update = filter_dictionary(
+        {
+            "author": body.author,
+            "hash": body.hash,
+            "alias": body.alias,
+        }
+    )
+
+    updated_result = await collection.update_one(filters, {"$set": data_to_update})
+    if updated_result.modified_count > 0:
+        return await get_single_url(filters)
+    else:
+        raise HTTPException(status_code=404, detail="URL not found")
 
 
 @router.delete("/url/{id}/", tags=["url"])
